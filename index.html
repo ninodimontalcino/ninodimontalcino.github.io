@@ -31,8 +31,13 @@
             .linear-grad-3 { background-image: linear-gradient(to bottom right, rgb(194 194 194), rgb(248 248 249), #a9a9a9);}
             .highlight {padding: 1px 3px 1px 3px; background: #e89d2d12; border-radius: 5px;}
             .academic-link {padding: 5px 10px 5px 10px; background: #e89d2d12; border-radius: 5px; border: 1px solid rgb(161, 105, 0);}
-            .academic-link:hover {background: rgba(250, 240, 214, 0.103);}
+            .academic-link:hover {background: rgba(250, 240, 214, 0.103); margin-bottom: 40px;}
+            .academic-link-box {width:auto; margin-bottom: 20px; float:left; margin:2px; }
             .research {margin-top: 50px; text-align: left;}
+
+            @media only screen and (max-width: 600px) {
+                .academic-link-box {width:100%; margin: 10px; }
+            }
         </style>
 
         <!-- ANALYTICS -->
@@ -60,13 +65,21 @@
                          focus on causal discovery, representation learning and reinforcement learning. I did my 
                          masters and bachelors in computer science at <a class="highlight" href="https://ethz.ch/en.html">ETH&nbsp;Zürich</a> and collaborated with <a class="highlight" href="https://ei.is.mpg.de/">MPI for Intelligent Systems, Tübingen</a> during my master thesis. 
                          Previously, I did an apprenticeship in computer science and worked multiple years as a systems engineer.  </p>
-                    <p>
+                    <div style="display: flex; flex-wrap: wrap; text-align: center; justify-content: center; margin-top:20px">
                         <br>
-                        <a class="academic-link" href="https://scholar.google.com/citations?user=CG9n26kAAAAJ&hl=en">Google Scholar</a> 
-                        <a class="academic-link" href="https://twitter.com/ninoscherrer">Twitter</a> 
-                        <a class="academic-link" href="https://github.com/ninodimontalcino">Github</a> 
-                        <a class="academic-link" href="https://ch.linkedin.com/in/ninoscherrer">Linkedin</a>
-                    </p>
+                        <div class="academic-link-box">
+                            <a class="academic-link" href="https://scholar.google.com/citations?user=CG9n26kAAAAJ&hl=en">Google Scholar</a> 
+                        </div>
+                        <div class="academic-link-box">
+                            <a class="academic-link" href="https://twitter.com/ninoscherrer">Twitter</a>
+                        </div>
+                        <div class="academic-link-box">
+                            <a class="academic-link" href="https://github.com/ninodimontalcino">Github</a> 
+                        </div>
+                        <div class="academic-link-box">
+                            <a class="academic-link" href="https://ch.linkedin.com/in/ninoscherrer">Linkedin</a>
+                        </div> 
+                    </div>
                     
                     <div class="research">
                         <h2>Research</h2>
