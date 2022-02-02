@@ -23,8 +23,8 @@
             html, body {margin: 0px; padding: 0px; font-size: 14px;}
             body {height:100%; width:100%; font-family: 'Open Sans', sans-serif;}
             ul {list-style: outside none none; padding: 0px}
-            li {margin-bottom: 10px; background: #dbbf8b1a; padding: 20px; border-radius: 10px;}
-            li > b{font-size: 14px; color:rgb(143, 64, 11); }
+            li {margin-bottom: 10px; background: #dbbf8b1a; padding: 20px; border-radius: 10px; display:block;}
+            li > .flex-container > .flex-item-left > b{font-size: 14px; color:rgb(143, 64, 11); }
             li:last-child {margin-bottom: 0px;}
             a {color:rgb(143, 64, 11); text-decoration: none; font-weight: 500; }
             .full {height: 100%; width:100%; background-color: rgba(250, 240, 214, 0.103); position: relative; margin: auto;}
@@ -39,6 +39,16 @@
             .research {margin-top: 30px; text-align: left;}
             .research-br {display: block; content: ""; margin: 3px 0;}
             .b-personal {color:black;}
+
+            * {box-sizing: border-box;}
+            .flex-container { display: flex; flex-wrap: wrap; text-align: center;}
+            .flex-item-left { padding: 10px; flex: 60%;}
+            .flex-item-right { padding: 10px; flex: 30%;}
+
+            /* Responsive layout - makes a one column-layout instead of a two-column layout */
+            @media (max-width: 800px) {
+                .flex-item-right, .flex-item-left { flex: 100%;}
+            }
 
             @media only screen and (max-width: 600px) {
                 .academic-link-box {width:60%; margin: 5px; }
@@ -89,20 +99,44 @@
                     <div class="research">
                         <h2>Research</h2>
                         <ul>
-                            <li><b>Learning Neural Causal Models with Active Interventions</b><br class="research-br">
-                                <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br>
-                                 Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
-                                 <a href="https://arxiv.org/abs/2109.02429">[Paper]</a>
+                            <li>
+                                <div class="flex-container">
+                                    <div class="flex-item-left">
+                                        <b>Learning Neural Causal Models with Active Interventions</b><br class="research-br">
+                                        <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br>
+                                        Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
+                                        <a href="https://arxiv.org/abs/2109.02429">[Paper]</a>
+                                    </div>
+                                    <div class="flex-item-right">
+                                        <img src="img/AIT.png" style="width: 300px">
+                                    </div>   
+                                </div>
                             </li>
-                            <li><b>Variational Causal Networks: Approximate Bayesian Inference over Causal Structures</b><br class="research-br">
-                                Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br>
-                                Preprint (arXiv) & KDD - BCIRWIS Workshop, 2021,<br class="research-br">
-                                <a href="https://arxiv.org/abs/2106.07635">[Paper]</a> <a href="https://github.com/yannadani/vcn_pytorch">[Code]</a> 
+                            <li>
+                                <div class="flex-container">
+                                    <div class="flex-item-left">
+                                        <b>Variational Causal Networks: Approximate Bayesian Inference over Causal Structures</b><br class="research-br">
+                                        Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br>
+                                        Preprint (arXiv) & KDD - BCIRWIS Workshop, 2021,<br class="research-br">
+                                        <a href="https://arxiv.org/abs/2106.07635">[Paper]</a> <a href="https://github.com/yannadani/vcn_pytorch">[Code]</a> 
+                                    </div>
+                                    <div class="flex-item-right">
+                                        <img src="img/VCN.png" style="width: 300px">
+                                    </div>   
+                                </div>
                              </li>
-                            <li><b>Improved Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with Synthetically Enhanced Deep Learning</b> <br class="research-br">
-                                Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian Macclaren, Maarten Lansberg & Sebastian Kozerke,<br>
-                                Radiology: Artificial Intelligence, 2020, <br class="research-br">
-                                <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
+                            <li>
+                                <div class="flex-container">
+                                    <div class="flex-item-left">
+                                        <b>Improved Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with Synthetically Enhanced Deep Learning</b> <br class="research-br">
+                                        Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian Macclaren, Maarten Lansberg & Sebastian Kozerke,<br>
+                                        Radiology: Artificial Intelligence, 2020, <br class="research-br">
+                                        <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
+                                    </div>
+                                    <div class="flex-item-right">
+                                        <img src="img/SyntheticDiffusion.png" style="width: 300px">
+                                    </div>   
+                                </div>
                             </li>
                         </ul>
                     </div> 
