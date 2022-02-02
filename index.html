@@ -23,9 +23,10 @@
             html, body {margin: 0px; padding: 0px; font-size: 14px;}
             body {height:100%; width:100%; font-family: 'Open Sans', sans-serif;}
             ul {list-style: outside none none; padding: 0px}
-            li {margin-bottom: 10px; background: #e0bf831a; padding: 20px; border-radius: 10px;}
+            li {margin-bottom: 10px; background: #dbbf8b1a; padding: 20px; border-radius: 10px;}
+            li > b{font-size: 14px; color:rgb(143, 64, 11); }
             li:last-child {margin-bottom: 0px;}
-            a {color:rgb(168, 80, 21); text-decoration: none; font-weight: 500; }
+            a {color:rgb(143, 64, 11); text-decoration: none; font-weight: 500; }
             .full {height: 100%; width:100%; background-color: rgba(250, 240, 214, 0.103); position: relative; margin: auto;}
             .box-main {width: 95%; max-width: 900px;  margin: auto; border-radius: 10px; position: absolute; top: 0; bottom: 0; left: 0; right: 0;} 
             .box-left {width: auto; text-align: center; margin-top: 2px; padding: 20px; }
@@ -35,7 +36,9 @@
             .highlight {padding: 1px 3px 1px 3px; background: #e89d2d12; border-radius: 5px;}
             .academic-link:hover {background: rgba(250, 240, 214, 0.103); margin-bottom: 20px;}
             .academic-link-box { margin-bottom: 0px; float:left; margin:2px; padding: 8px 12px 8px 12px; background: #e89d2d12; border-radius: 5px; border: 1px solid rgb(161, 105, 0);}
-            .research {margin-top: 50px; text-align: left;}
+            .research {margin-top: 30px; text-align: left;}
+            .research-br {display: block; content: ""; margin: 3px 0;}
+            .b-personal {color:black;}
 
             @media only screen and (max-width: 600px) {
                 .academic-link-box {width:60%; margin: 5px; }
@@ -66,7 +69,7 @@
                     <p>My research interest centers around the causal perspective on machine learning with a
                          focus on causal discovery, representation learning and reinforcement learning. I did my 
                          masters and bachelors in computer science at <a class="highlight" href="https://ethz.ch/en.html">ETH&nbsp;Zürich</a> and collaborated with <a class="highlight" href="https://mila.quebec/en/">Mila</a> and <a class="highlight" href="https://ei.is.mpg.de/">MPI for Intelligent Systems, Tübingen</a> during my master thesis on active neural causal discovery. 
-                         Previously, I did a diploma (vocational education) in computer science and worked multiple years as a systems engineer.  </p>
+                         Previously, I did a diploma (vocational education) in computer science and worked multiple years as a systems engineer at <a class="highlight" href="https://www.sfs.com/ch/en/">SFS AG</a>.  </p>
                     <div style="display: flex; flex-wrap: wrap; text-align: center; justify-content: center; margin-top:30px">
                         <br>
                         <div class="academic-link-box">
@@ -86,20 +89,20 @@
                     <div class="research">
                         <h2>Research</h2>
                         <ul>
-                            <li><b>Learning Neural Causal Models with Active Interventions</b><br>
-                                Nino Scherrer, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br>
-                                 Preprint (arXiv) & NeurIPS WHY-21 Workshop: Causal Inference & Machine Learning: Why now? 2021, <br>
-                                 <a href="https://arxiv.org/abs/2109.02429">https://arxiv.org/abs/2109.02429</a>
+                            <li><b>Learning Neural Causal Models with Active Interventions</b><br class="research-br">
+                                <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br>
+                                 Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
+                                 <a href="https://arxiv.org/abs/2109.02429">[Paper]</a>
                             </li>
-                            <li><b>Variational Causal Networks: Approximate Bayesian Inference over Causal Structures</b><br> 
-                                Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, Nino Scherrer, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br>
-                                Preprint (arXiv) & BCIRWIS 2021: Bayesian causal inference for real world interactive systems - (KDD 2021 Workshop), 2021,<br>
-                                <a href="https://arxiv.org/abs/2106.07635">https://arxiv.org/abs/2106.07635</a>
+                            <li><b>Variational Causal Networks: Approximate Bayesian Inference over Causal Structures</b><br class="research-br">
+                                Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br>
+                                Preprint (arXiv) & KDD - BCIRWIS Workshop, 2021,<br class="research-br">
+                                <a href="https://arxiv.org/abs/2106.07635">[Paper]</a> <a href="https://github.com/yannadani/vcn_pytorch">[Code]</a> 
                              </li>
-                            <li><b>Improved Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with Synthetically Enhanced Deep Learning</b> <br>
-                                Christian Federau, Soren Christensen, Nino Scherrer, Johanna M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian Macclaren, Maarten Lansberg & Sebastian Kozerke,<br>
-                                Radiology: Artificial Intelligence, 2020, <br>
-                                <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217</a>
+                            <li><b>Improved Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with Synthetically Enhanced Deep Learning</b> <br class="research-br">
+                                Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian Macclaren, Maarten Lansberg & Sebastian Kozerke,<br>
+                                Radiology: Artificial Intelligence, 2020, <br class="research-br">
+                                <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
                             </li>
                         </ul>
                     </div> 
