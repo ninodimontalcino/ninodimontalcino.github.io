@@ -258,7 +258,7 @@
                         over multiple graphs, <span class="b-color">VWG</span> accounts for the sample variance when a specific graph is fixed. %As in SDI and DCDI, We mask the contribution of the intervened variables 
                         $I_k$ to <span class="b-color">VBG</span> and <span class="b-color">VWG</span>, and construct our discrepancy score $D$ as a ratio:  
                         $$
-                            \scriptsize
+                            \small
                             D = \frac{\texttt{VBG}}{\texttt{VWG}}
                         $$
                         This discrepancy score attains high values for intervention targets of particular interest. While <span class="b-color">VBG</span> itself indicates for which intervention targets the model is 
@@ -277,7 +277,7 @@
                         the considered graphs for the specific intervention target $I_k$, we compute $\smash{\texttt{VBG}_k}$ and $\smash{\texttt{VWG}_k}$ as follows:
 
                         \[
-                            \scriptsize
+                            \small
                             \begin{split}
                                 \texttt{VBG}_k &= \sum_i < \big(\mu_{i,k} - \bar{\mu}_{k}\big), \big(\mu_{i,k} - \bar{\mu}_{k}\big) > \\ 
                                 \texttt{VWG}_k &= \sum_i \sum_j <\big(\big[S_{i,k}\big]_{j} - \mu_{i,k}\big), \big(\big[S_{i,k}\big]_{j} - \mu_{i,k}\big)>
@@ -285,7 +285,7 @@
                         \]
                         where $\bar{\mu}_k$ is a vector of the same dimension as any sample in $S$ and denotes the overall sample-mean over all graphs in the interventional setting $I_k$. Further, $\mu_{i,k}$ denotes the mean of samples drawn from graph $\mathcal{G}_{i,k}$ and $\big[S_{i,k}\big]_{j}$ is the $j$-th sample of the $i$-th graph configuration under intervention $I_k$. Finally, we construct the discrepancy score $D_k$ of $I_k$ as: 
                         \[
-                            \scriptsize
+                            \small
                             D_k \leftarrow \frac{\texttt{VBG}_k}{\texttt{VWG}_k}.
                         \]
 
@@ -330,7 +330,7 @@
                         to sample a root node, we apply a temperature-scaled softmax:
 
                         \[
-                        \scriptsize
+                        \small
                             p_l(i) = \mathrm{softmax}(p_l^{root}/t)_i = \frac{\exp\big[p_l^{root}(i)/t\big]}{\sum_{j}^{ }\exp\big[p_l^{root}(j)/t\big]}
                         \]
                         where $t$ denotes the temperature. The introduction of temperature-scaling allows to control the distribution over nodes and account for the entropy of the structural belief. 
