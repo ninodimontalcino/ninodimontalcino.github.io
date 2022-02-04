@@ -237,7 +237,7 @@
                         and this may include causal sufficiency depending on the base algorithm of choice. In case the underlying framework can handle unobserved variables and offers a 
                         generative method for interventional samples, then our method is also applicable
                         <div style="display: flex;">
-                            <img src="../img/AIT/AIT_detailed.png" style="width: 90%; max-width: 800px; margin:auto;">
+                            <img src="../img/AIT/AIT_detailed.png" style="width: 90%; max-width: 900px; margin:auto;">
                         </div>
 
                         <h3>A Score for Intervention Targeting</h3>
@@ -319,7 +319,7 @@
                         and do not have to rely on expensive, non-scalable techniques such as rejection sampling or Gibbs sampling. The overall method is inspired by topological sorting algorithms 
                         of DAGs where we iteratively identify nodes with no incoming edges, remove them from the graph and repeat until all nodes are processed.
                         <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
-                            <img src="../img/AIT/TwoPhaseDAGSampling.png" style="width: 90%; max-width: 900px; margin:auto;">
+                            <img src="../img/AIT/TwoPhaseDAGSampling.png" style="width: 90%; max-width: 1200px; margin:auto;">
                         </div>
 
                         <h4>Phase 1: Sample Node Orderings</h4>
@@ -354,7 +354,7 @@
                         our proposed method for DCDI on non-linear data from random graphs of size 10. Active Intervention Targeting improves the identification in terms of 
                         sample complexity and structural identifiability compared with random exploration. We observe a clear impact of the targeting mechanisms on the order and frequency of interventional targets presented to the model. 
                         <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
-                            <img src="../img/AIT/DSDI_ResultsTable_15.png" style="width: 90%; max-width: 900px; margin:auto;">
+                            <img src="../img/AIT/DSDI_ResultsTable_15.png" style="width: 90%; max-width: 1200px; margin:auto;">
                         </div>
 
                         <h3>Effect of AIT on Sample-Complexity</h3>
@@ -363,7 +363,7 @@
                         In contrast, our proposed technique continues to select informative intervention targets beyond the elbow point and more quickly converges to the correct graph within the MEC. 
                         The continued effectiveness of our method directly translates to increased sample-efficiency and convergence speed, and is apparent for all examined datasets.
                         <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
-                            <img src="../img/AIT/DSDI_Performance15.png" style="width: 90%; max-width: 900px; margin:auto;">
+                            <img src="../img/AIT/DSDI_Performance15.png" style="width: 90%; max-width: 1200px; margin:auto;">
                         </div>
 
                         <h3>Distribution of selected Intervention Targets</h3>
@@ -373,7 +373,7 @@
                         graph structure. That our method prefers interventions on nodes with greater (downstream) impact on the overall system can 
                         be most clearly observed in the distribution of target selection on the example of the synthetic \texttt{jungle} graph .
                         <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
-                            <img src="../img/AIT/DSDI_CorrelationPlot_15.png" style="width: 90%; max-width: 900px; margin:auto;">
+                            <img src="../img/AIT/DSDI_CorrelationPlot_15.png" style="width: 90%; max-width: 1200px; margin:auto;">
                         </div>
 
                         <h3>Improved Robustness in Noise-Perturbed Environments</h3>
@@ -385,7 +385,7 @@
                         random targeting does not converge to the ground-truth graphs for all graphs with a noise level higher than $\eta = 0.02$. In contrast, AIT still converges to the correct graph and shows even a convergence tendency for $\eta = 0.05$. 
                         These findings support our observation from different experiments that active intervention targeting leads to a more controlled and robust graph discovery.
                         <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
-                            <img src="../img/AIT/DSDI_Noise.png" style="width: 90%; max-width: 900px; margin:auto;">
+                            <img src="../img/AIT/DSDI_Noise.png" style="width: 90%; max-width: 1200px; margin:auto;">
                         </div>
 
                         <h3>More results coming soon ...</h3>
