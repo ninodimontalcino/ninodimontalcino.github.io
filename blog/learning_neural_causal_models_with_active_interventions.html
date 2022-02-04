@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Learning Neural Causal Models with Active Interventions</title>
+
+        <!-- META STUFF-->
+        <meta charset="utf-8">
+        <meta name="author" content="Nino Scherrer">
+        <meta name="description" content="My research interest centers around the causal perspective on machine learning with a
+        focus on causal discovery, representation learning and reinforcement learning.">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+
+        <!-- LATEX STUFF -->
+        <script type="text/x-mathjax-config">
+            MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+        </script>
+        <script type="text/javascript"
+            src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+        </script>
+        <link rel="stylesheet" type="text/css" href="http://tikzjax.com/v1/fonts.css">
+        <script src="http://tikzjax.com/v1/tikzjax.js"></script>
+         <!-- LATEX STUFF -->
+
+        <!-- STYLING -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+        <style type="text/css">
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,500,600display=swap');
+            @-ms-viewport{ width: device-width; }
+            html, body {margin: 0px; padding: 0px; font-size: 15px; line-height: 1.5;}
+            body {height:100%; width:100%; font-family: 'Open Sans', sans-serif;}
+            ul {list-style: outside none none; padding: 0px}
+            li {margin-bottom: 10px; background: #e89d2d12; padding: 15px; border-radius: 5px; display:block; border-left: 5px solid rgb(143, 64, 11, 0.33);}
+            li > .flex-container > .flex-item-left > b{font-size: 14px; color:rgb(143, 64, 11); }
+            li:last-child {margin-bottom: 0px;}
+            a {color:rgb(143, 64, 11); text-decoration: none; font-weight: 500; }
+            .full {height: 100%; width:100%; background-color: rgba(250, 240, 214, 0.103); position: relative; margin: auto;}
+            .box-main {width: 95%; max-width: 900px;  margin: auto; border-radius: 10px; position: absolute; top: 0; bottom: 0; left: 0; right: 0;} 
+            .box-left {width: auto; text-align: center; margin-top: 2px; padding: 10px; }
+            .box-right {text-align: center; margin-top: 20px; padding: 0px; width: 100%; display: flex; justify-content: center;}
+            .portrait {border-radius: 5px;; max-height: 150px; min-height: 100px; margin-top: 40px; }
+            .linear-grad-3 { background-image: linear-gradient(to bottom right, rgb(194 194 194), rgb(248 248 249), #a9a9a9);}
+            .highlight {padding: 1px 3px 1px 3px; background: #e89d2d12; border-radius: 5px;}
+            .academic-link-box { margin-bottom: 0px; float:left; margin:2px; padding: 8px 12px 8px 12px; background: #e89d2d12; border-radius: 5px; border: 0.5px solid rgb(161, 105, 0);}
+            .academic-link-box:hover {background: #e89d2d4f;}
+            .research {margin-top: 30px; text-align: left; justify-content: center; }
+            .research-br {display: block; content: ""; margin: 3px 0;}
+            .research-item-img {width: 300px; max-width: 95%; margin:auto;}
+            .b-personal {    color: black !important; font-weight: 600;}
+            .b-color {color:rgb(143, 64, 11);}
+            .li-talks{padding: 10px;}
+            .box-interest {padding: 5px 10px;  margin: 2px 5px; background: #e89d2d12; border-radius: 5px; border: 0.5px solid rgb(161, 105, 0, .8); color:rgb(143, 64, 11); }
+            .box-topic {margin-top: 25px;}
+            .box-item-topic {padding: 3px 7px;  margin: 5px 5px; background: #ebcc9e44; border-radius: 5px; color:rgb(143, 64, 11); }
+
+            * {box-sizing: border-box;}
+            .flex-box {display: flex; flex-wrap: wrap; text-align: center; justify-content: center; margin-top:20px;}
+            .flex-container { display: flex; flex-wrap: wrap; text-align: center;}
+            .flex-item-left { padding: 10px; flex: 60%;}
+            .flex-item-right { padding: 10px; flex: 30%;}
+
+            /* Responsive layout - makes a one column-layout instead of a two-column layout */
+            @media (max-width: 800px) {
+                .flex-item-right, .flex-item-left { flex: 100%;}
+            }
+
+            @media only screen and (max-width: 600px) {
+                .academic-link-box {width:60%; margin: 5px; }
+                .box-interest{width: 60%; margin: 2px 10px;}
+            }
+        </style>
+
+        <!-- ANALYTICS -->
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9E9KCECL1F"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-9E9KCECL1F');
+        </script>
+    </head>
+    <body>
+        <div class="full">
+            <div class="box-main "> 
+                <div class="box-left">
+                    <h1 style="margin-top: 40px;">Learning Neural Causal Models with Active Interventions</h1>
+                    <h4>Nino Scherrer$^1$, Olexa Bilaniuk$^2$, Yashas Annadani$^1$, Anirudh Goyal$^2$, Patrick Schwab$^3$, Bernhard Schölkopf$^4$,<br>
+                         Michael C. Mozer$^5$, Yoshua Bengio$^2$, Stefan Bauer$^{3,6,7}$ & Nan Rosemary Ke$^8$</h4>
+                         <h5> $^1$ ETH Zurich, $^2$ Mila, Universite de Montréal, $^3$ GlaxoSmithKline, $^4$ Max Planck Institute for Intelligent Systems, <br>
+                            $^5$ Google Research, Brain Team, $^6$ CIFAR Azrieli Global Scholar, $^7$ KTH Stockholm, $^8$ DeepMind</h5>
+                            <a href="https://arxiv.org/abs/2109.02429">https://arxiv.org/abs/2109.02429</a>
+                    <div class="research" style="display: flex;">
+                        <img src="../img/AIT/AIT.png" style="width: 90%; max-width: 500px; margin:auto;">
+                    </div>
+                    <div class="research">
+                        <ul>
+                            <li>
+                                <b class="b-color" style="font-size: 18px; margin-bottom: 20px;">TL;DR:</b>
+                                <br>
+                                We propose to augment neural causal discovery methods with the ability to actively intervene. 
+                                Therefore, we introduce <b>Active Intervention Targeting (AIT)</b>, 
+                                an adaptive intervention design technique for the batch-wise acquisition of interventional samples. 
+                                AIT enables a quick identification of causal structure of the underlying data-generating process.
+                                <div class="box-topic flex-box">
+                                    <div class="box-item-topic">Differentiable Causal Discovery</div>
+                                    <div class="box-item-topic">Active Learning</div>
+                                    <div class="box-item-topic">Experimental Design</div>
+                                </div>
+                            </li>
+                            <li style="background-color: rgb(235, 235, 245); border-left: 5px solid rgba(98, 73, 240, 0.589);">
+                                Please note that references are currently removed for readability. Please see the full-print on ArXiv for a complete version.
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="research">
+                        <h2>Why <span class="b-color">Active</span> Neural Causal Discovery?</h2>
+                        Inferring causal structure from data is a challenging but important task that lies at the heart of scientific reasoning and accomanyping progress. 
+                        Recently, there has been a surge in interest in differentiable causal structure learning with neural networks, also known as <b class="b-color">neural causal discovery</b>. 
+                        These methods propose to avoid a discrete search over the combinatorial solution space by treating it as an optimization problem with smoothly differentiable parameters. 
+                        The set of neural parameters embodies a <b class="b-color">neural causal model $\mathcal{N}$</b> that represents parameters of both structural and functional nature. Structural parameters express 
+                        the belief about the graph structure through a distribution over graphs, for example with a soft-adjacency matrix. On the other hand, functional parameters characterize the 
+                        conditional probability distributions of the factorized joint distribution of a directed graphical model. Overall, such models offer promising abilities with respect to 
+                        generalization and fast adaptation.
+                        <br><br>
+                        Existing neural causal discovery methods focus on fixed datasets of either observational or fused (observational and interventional) nature. 
+                        While having access to interventional data can significantly improve the identification of the underlying causal structure, the improvement critically depends on the nature of 
+                        the experiments and the number of interventional samples available to the learner. In addition, interventions tend to be costly and can be technically impossible or even 
+                        unethical. <b class="b-color">Hence it is desirable for an agent to conduct active interventions to recover the underlying causal structure in an adaptive and efficient manner. </b>
+                         While a large body of work has addressed this need based on non-differentiable frameworks, existing work in neural causal discovery has not yet focused on incorporating active interventions. 
+                        <br><br>
+                        In this work, we propose to augment neural causal discovery methods with the ability to actively intervene. Therefore, we introduce Active Intervention Targeting (AIT),
+                        an adaptive intervention design technique for the batch-wise acquisition of interventional samples. AIT can be easily incorporated into any neural causal discovery method 
+                        which provides access to structural and functional parameters. In AIT, we decide where to intervene by computing a score for all possible intervention 
+                        targets (over a single or multiple variables). This score provides us with an estimate how informative an intervention at that target would be with respect to the current evidence. 
+                        For a set of hypothesis graphs sampled from the structural belief and a fixed intervention target, we apply the intervention on all hypothesis graphs and generate hypothetical samples 
+                        through an ancestral sampling process based on the functional parameters. This allows us to compare statistics of the post-interventional sample distributions across the hypothesis graphs. 
+                        We conjecture (and empirically show) that interventions that do not agree across different hypothesis graphs contain more information about the causal structure and hence enable more efficient learning. 
+                        <ul>
+                            <li>
+                                <b class="b-color" style="margin-bottom: 10px;">Contributions:</b>
+                                <br>
+                                We propose an intervention design method (single and multi-target) which identifies the underlying graph efficiently and can be used for any differentiable causal 
+                                discovery method. We examine the proposed intervention-targeting method across multiple differentiable causal discovery frameworks in a wide range of settings 
+                                and demonstrate superior performance against established competitive baselines on multiple benchmarks from simulated to real-world data. We provide empirical insights 
+                                on the distribution of selected intervention targets and its connection to the topological order of the variables in the underlying data-generating distribution.
+                            </li>
+                        </ul>
+                        
+                        <h2>Structural Causal Models and Interventions</h2>
+                        <ul>
+                            <li>
+                                <b class="b-color" style="margin-bottom: 10px;">Structural Causal Model (SCM) and Causal Factorization:</b>
+                                <br>
+                                A <b>SCM</b> is defined over a set of random variables $X_1, ..., X_N$ and a directed acyclic graph (DAG) $G=(V,E)$ over variable nodes $V\in\{1,...,N\}$. 
+                                The random variables are connected by edges in $E$ via functions $f_i$ and jointly independent noise variables $U_i$ through
+                                $$
+                                    \small
+                                    X_i \:= f_i(X_{pa(i)}, U_i)
+                                $$
+                                where $X_{pa(i)}$ are parents in $G$, and directed edges in the graph represent causation.The conditionals $P(X_i|X_{pa(i)})$ define the conditional distribution of $X_i$ given its parents. 
+                                This characterization entails a factorization of the joint observational distribution, also known as <b>causal factorization</b>:
+                                $$
+                                    \small
+                                    P(X_1, \ldots, X_N) = \prod_{i=1}^{N} P(X_i|X_{pa(i)}) 
+                                $$
+                            </li>
+                            <li>
+                                <b class="b-color" style="margin-bottom: 10px;">Interventions:</b>
+                                <br>
+                                Interventional settings represent the system under different perturbations and therefore affect the observed joint distribution. 
+                                Specifically, an intervention on $X_i$ changes the conditional distribution of $P(X_i|X_{pa(i, \mathcal{G})})$ to a different distribution, 
+                                hence affecting the outcome of $X_i$. Interventions can be <i>hard (perfect)</i> or <i>soft (imperfect)</i>.  
+
+                                <script type="text/tikz">
+                                    \begin{tikzpicture}
+                                      \draw (0,0) circle (1in);
+                                    \end{tikzpicture}
+                                </script>    
+
+                                <br><br>
+                                <b>Hard interventions</b> entirely remove the dependencies of a variable $X_i$ on its parents $X_{pa(i, \mathcal{G})}$, 
+                                hence defining the conditional probably distribution of $X_i$ by some $\tilde{P}(X_i)$ rather than $P(X_i|X_{pa(i, \mathcal{G})})$.  
+
+                                <br><br>
+                                <b>Soft interventions</b> are a more general form, where the intervention changes the effect of the  parents of $X_i$ on itself by modifying the 
+                                conditional distribution from $P(X_i|X_{pa(i, \mathcal{G})})$ to an alternative $\tilde{P}(X_i|X_{pa(i, \mathcal{G})})$. 
+
+                                <br><br>
+                                Interventions can be performed simultaneously on multiple variables of the systems. We denote the set of affected variables as \emph{interventional target set} $I 
+                                \subseteq V$. Given such a set $I$ of size $|I|=k$, the joint distribution over all variable of the interventional setting for the general case of soft interventions 
+                                is given by:
+                                \[
+                                \small
+                                \tilde{P}(X_1, ..., X_N | do(I)) = 
+                                \underbrace{\prod_{X_i \in V \setminus I} P(X_i|X_{pa(i, \mathcal{G})})}_{unperturbed} \hspace{2mm}
+                                \underbrace{\prod_{X_i \in I} \tilde{P}(X_i|X_{pa(i , \mathcal{G})})}_{perturbed} 
+                                \]
+                            </li>
+                        </ul>
+
+                        <h2>How does <span class="b-color">Neural Causal Discovery from Fused Data</span> work?</h2>
+                        Neural causal discovery from fused data aims at fitting fused data with a neural causal model $\mathcal{N}$, an SCM with smoothly differentiable parameters 
+                        of functional and structural nature, using a score-based objective. Structural parameters $\gamma$ encode our belief in the underlying graph structure $G$, 
+                        usually in form of a learned soft-adjacency matrix representing a distribution over graphs. Functional parameters $\theta$ encode the conditional probability distributions 
+                        (CPDs) $P(X_i|X_{pa(i})$ through neural networks that either learn parameters of a distributional family (e.g. Gaussians or normalizing flows) or approximate the function itself. This is usually realized by a stack of MLPs, i.e. one MLP per variable, to represent its conditional distribution.
+                        <ul>
+                            <li>
+                                <b class="b-color" style="margin-bottom: 10px;">Structure Discovery from Interventions (SDI):</b>
+                                <br>    
+                                The SDI framework approach reformulates the problem of causal discovery from fused, discrete data as a discrete optimization problem using neural networks. 
+                                The framework proposes to learn the parameters of a neural causal model using a two-stage training procedure with alternating phases of optimization. 
+                                <br><br>
+                                <span class="b-color">Functional fitting</span> fits under a fixed structural belief the functional parameters $\theta$ (representing the observational CPDs) 
+                                to observational data. In order to account for the stochastic nature of the structural belief, the method samples different hypothesized graphs in this stage and 
+                                uses them in a dropout-like fashion to mask out all variables except the direct causal parents according to the graph while fitting the functional parameters. 
+                                This enforces the CPDs to be trained on different sets of parents and will converge to the set of true parents as the structure converges. 
+                                <br><br>
+                                <span class="b-color">Structural fitting</span> freezes the functional parameters and evaluates the fit to interventional data of 
+                                different hypothesized graphs. The adaptation scores are then used to update the belief in the graph structure by propagating them to update the structural parameters. 
+                                The method performs competitively to many other methods. However, it processes all interventions in a random and independent manner, a strategy that scales poorly to larger graphs.
+                                <div style="display: flex; margin-top:20px">
+                                    <img src="../img/AIT/DSDI_nonactive.png" style="width: 90%; max-width: 500px; margin:auto;">
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="research">
+                        <h2>How to actively intervene with <span class="b-color">Active Intervention Targetting (AIT)</span>?</h2>
+                        We present a score-based, adaptive intervention design strategy, called AIT, which is applicable to any neural causal discovery method which provides access to structural 
+                        and functional parameters. 
+                        <br><br>
+                        <b>Assumptions:</b> The proposed method does not have to assume causal sufficiency per se. However, it inherits the assumptions of the selected base framework, 
+                        and this may include causal sufficiency depending on the base algorithm of choice. In case the underlying framework can handle unobserved variables and offers a 
+                        generative method for interventional samples, then our method is also applicable
+                        <div style="display: flex;">
+                            <img src="../img/AIT/AIT_detailed.png" style="width: 90%; max-width: 800px; margin:auto;">
+                        </div>
+
+                        <h3>A Score for Intervention Targeting</h3>
+                        Given a structural belief state $\gamma$ with its corresponding functional parameters $\theta$, and a possible set of intervention targets $I$ 
+                        (single and multi-node intervention targets), we wish to select the most \textit{informative} intervention target(s) $I_{k^*} \in I$ to identify as quickly as 
+                        possible the underlying structure. In AIT, we decide where to intervene by computing a score for all possible intervention targets. This score provides us with an 
+                        estimate how informative an intervention at that target would be with respect to the current evidence. 
+                        
+                        <ul>
+                            <li>
+                                We claim that such <span class="b-color">informative interventions</span> would yield relatively high discrepancies between post-interventional samples drawn under different hypothesis graphs, making it possible to discriminate better among these 
+                                candidate graphs and indicating larger uncertainty about the intervention target's relation to its parents and/or children. 
+                            </li>
+                        </ul>
+                        We thus construct an F-test-inspired score to seek the target $I_{k^*}$ exhibiting the highest discrepancies between post-interventional sample distributions generated by 
+                        likely graph structures under fixed functional parameters $\theta$. In order to compare sample distributions over different graphs, we distinguish between two sources of 
+                        variation: variance between graphs <span class="b-color">VBG</span> and variance within graphs <span class="b-color">VWG</span>. While <span class="b-color">VBG</span> characterizes the variance of sample means 
+                        over multiple graphs, <span class="b-color">VWG</span> accounts for the sample variance when a specific graph is fixed. %As in SDI and DCDI, We mask the contribution of the intervened variables 
+                        $I_k$ to <span class="b-color">VBG</span> and <span class="b-color">VWG</span>, and construct our discrepancy score $D$ as a ratio:  
+                        $$
+                            \scriptsize
+                            D = \frac{\texttt{VBG}}{\texttt{VWG}}
+                        $$
+                        This discrepancy score attains high values for intervention targets of particular interest. While <span class="b-color">VBG</span> itself indicates for which intervention targets the model is 
+                        unsettled about, an extension to the proposed variance ratio enables more control over the region of interest. Given a fixed set of graphs $\mathcal{G}$ and a fixed 
+                        interventional sample size across all graphs, let us assume a scenario where multiple intervention targets attain high <span class="b-color">VBG</span>. Assessing <span class="b-color">VWG</span> allows us 
+                        to distinguish between two extreme cases: (a) targets with sample populations that exhibit large <span class="b-color">VWG</span>, (b) targets with sample populations that exhibit low <span class="b-color">VWG</span>. 
+                        While high <span class="b-color">VBG</span> in (a) might be induced by an insufficient sample size due to high variance in the interventional distribution itself, (b) clearly indicates high 
+                        discrepancy between graphs and should be preferentially studied.
+
+                        <h3>Computation Details</h3>
+                        We begin by sampling a set of graphs $\mathcal{G}=\{\mathcal{G}_i\}, \, i = 1,2,3,\ldots$ from our structural parameters $\gamma$. This $\mathcal{G}$ will remain fixed for 
+                        all considered interventions for the current experimental round. Then, we fix an intervention target $I_k$ and apply the corresponding intervention to $\theta$, resulting 
+                        in partially altered functional parameters $\theta_k$ where some conditionals have been temporarily changed to be overriden by the intervention. Next, we draw interventional 
+                        samples $\smash{S_{i,k}}$ from $\theta_k$ on the post-interventional graphs $\mathcal{G}_{i,k} $ (i.e. intervention on target $I_k$ applied to graph $\mathcal{G}_i$). In 
+                        the variance calculation, we set the variables of the intervention targets $I_k$ to zero to mask off their contribution to the variance. Having collected all samples over 
+                        the considered graphs for the specific intervention target $I_k$, we compute $\smash{\texttt{VBG}_k}$ and $\smash{\texttt{VWG}_k}$ as follows:
+
+                        \[
+                            \scriptsize
+                            \begin{split}
+                                \texttt{VBG}_k &= \sum_i < \big(\mu_{i,k} - \bar{\mu}_{k}\big), \big(\mu_{i,k} - \bar{\mu}_{k}\big) > \\ 
+                                \texttt{VWG}_k &= \sum_i \sum_j <\big(\big[S_{i,k}\big]_{j} - \mu_{i,k}\big), \big(\big[S_{i,k}\big]_{j} - \mu_{i,k}\big)>
+                            \end{split}
+                        \]
+                        where $\bar{\mu}_k$ is a vector of the same dimension as any sample in $S$ and denotes the overall sample-mean over all graphs in the interventional setting $I_k$. Further, $\mu_{i,k}$ denotes the mean of samples drawn from graph $\mathcal{G}_{i,k}$ and $\big[S_{i,k}\big]_{j}$ is the $j$-th sample of the $i$-th graph configuration under intervention $I_k$. Finally, we construct the discrepancy score $D_k$ of $I_k$ as: 
+                        \[
+                            \scriptsize
+                            D_k \leftarrow \frac{\texttt{VBG}_k}{\texttt{VWG}_k}.
+                        \]
+
+                        In contrast to the original definition of the F-Score, we can ignore the normalization constants due to equal group size and degree-of-freedoms.
+                                                
+                    </div>
+
+                    <div class="research">
+                        <h2>How to <span class="b-color">sample DAGs</span> from a soft-adjacency matrix?</h2>
+                        We present a scalable two-stage DAG sampling technique for the efficient generation of hypothesis DAGs based on a soft-adjacency matrix, 
+                        which is a common parametrization of the structural belief.
+
+                        <ul>
+                            <li>
+                                <b class="b-color" style="margin-bottom: 10px;">Soft-Adjacency Matrix:</b>
+                                <br>
+                                Given a learnable graph structure $\gamma \in \mathbb{R}^{N \times N}$ of a graph over $N$ variables, the soft-adjacency matrix is given as $\sigma(\gamma) \in [0,1]^{N \times N}$ 
+                                such that $\sigma{(\gamma_{ij})} \in [0,1]$ encodes the probabilistic belief in random variable $X_j$ being a direct cause of $X_i$, where $\sigma(x) = (1+\exp(-x))^{-1}$ denotes the 
+                                sigmoid function. For the ease of notation, we define $A = \sigma(\gamma)$ and $A_l$ denotes the considered soft-adjacency $\sigma(\gamma)$ at iteration $l$. Note that the shape of 
+                                $A_l$ changes through the iterations.
+                            </li>
+                        </ul>
+
+                        <h3>Two-Phase DAG sampling</h3>
+                        Embedding AIT into recent differentiable causal discovery frameworks requires a graph sampler that generates a set of likely graph configurations under the 
+                        current graph belief state. However, drawing samples from unconstrained graphs (e.g. partially undirected graphs or cyclic directed graphs) is an expensive 
+                        multi-pass process. Here, we thus constrain our graph sampling space to DAGs. Since most differentiable causal structure learning algorithms learn edge beliefs 
+                        in the form of a soft-adjacency matrix, we present a scalable, two-stage DAG sampling procedure which exploits structural information of the soft-adjacency matrix 
+                        beyond independent edge confidences. More precisely, we start by sampling topological node orderings from 
+                        an iterative refined score and construct DAGs in the constrained space by independent Bernoulli draws over possible edges. We can thus guarantee DAGness by construction 
+                        and do not have to rely on expensive, non-scalable techniques such as rejection sampling or Gibbs sampling. The overall method is inspired by topological sorting algorithms 
+                        of DAGs where we iteratively identify nodes with no incoming edges, remove them from the graph and repeat until all nodes are processed.
+                        <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
+                            <img src="../img/AIT/TwoPhaseDAGSampling.png" style="width: 90%; max-width: 900px; margin:auto;">
+                        </div>
+
+                        <h4>Phase 1: Sample Node Orderings</h4>
+                        For the iterative root sampling procedure, we start at iteration $l=0$ with an initial soft-adjacency $A_l = A$ and apply the following routine for $N$ iterations. 
+                        We take the maximum over rows of $A_l$, resulting in a vector of independent probabilities $p_l^{child}$, where $p_l^{child}(i)$ denotes the maximal probability of 
+                        variable $X_i$ being a child of any other variable at the current belief state. After taking the complement $p_l^{root} = 1-p_l^{child}$, we arrive at $p_l^{root}$ 
+                        where $p_l^{root}(i)$ denotes the approximated probability of variable $X_i$ being a root node in the current round. In order to arrive at a normalized distribution 
+                        to sample a root node, we apply a temperature-scaled softmax:
+
+                        \[
+                        \scriptsize
+                            p_l(i) = \mathrm{softmax}(p_l^{root}/t)_i = \frac{\exp\big[p_l^{root}(i)/t\big]}{\sum_{j}^{ }\exp\big[p_l^{root}(j)/t\big]}
+                        \]
+                        where $t$ denotes the temperature. The introduction of temperature-scaling allows to control the distribution over nodes and account for the entropy of the structural belief. 
+                        We proceed by sampling a (root) node as $r_l \sim Categorical(p_l)$ and delete all corresponding rows and columns from $A_l$ and arrive at a shrinked soft-adjacency $A_{l+1} \in [0,1]^{(N-l-1) \times (N-l-1)}$ 
+                        over the remaining variables. We repeat the procedure until we have processed all nodes and have a resulting topological node ordering $\prec$ of $[r_0, ..., r_{N-1}]$.
+
+                        <h4>Phase 2: Sample DAGs based on Node Orderings</h4> 
+                        Given a node ordering $\prec$, we permute the soft-adjacency $A$ accordingly and constrain the upper triangular part by setting values to $0$ 
+                        to ensure DAGness by construction. Finally, we sample a DAG by independent Bernoulli draws of the edge beliefs. 
+                        
+                        
+                    </div>
+                    <div class="research">
+                        <h2><span class="b-color">AIT</span> improves Identifiability and Sample-Efficiency</h2>
+                        
+                        <h3>Improved Structure discovery</h3>
+                        We  evaluate accuracy in terms of Structural Hamming Distance (SHD) on a diverse set of synthetic non-linear datasets under both SDI and DCDI, adopting their respective 
+                        evaluation setups. SDI with AIT outperforms all baselines and SDI with random intervention targeting over all presented datasets. 
+                        It enables almost perfect identifiability on all structured graphs of size 15 except for the $\texttt{full15}$ graph, and significantly improves structure discovery of random graphs 
+                        with varying densities. As the size or density of the underlying causal graphs increases, the benefit of the selection policy becomes more apparent. We also examine the effectiveness of 
+                        our proposed method for DCDI on non-linear data from random graphs of size 10. Active Intervention Targeting improves the identification in terms of 
+                        sample complexity and structural identifiability compared with random exploration. We observe a clear impact of the targeting mechanisms on the order and frequency of interventional targets presented to the model. 
+                        <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
+                            <img src="../img/AIT/DSDI_ResultsTable_15.png" style="width: 90%; max-width: 900px; margin:auto;">
+                        </div>
+
+                        <h3>Effect of AIT on Sample-Complexity</h3>
+                        Aside from the significantly improved identification of underlying causal structures, our method allows for a substantial reduction in interventional sample complexity. 
+                        After reaching the ``elbow'' point in terms of structural Hamming distance, random intervention targeting requires a fairly long time to converge to a solution within the MEC. 
+                        In contrast, our proposed technique continues to select informative intervention targets beyond the elbow point and more quickly converges to the correct graph within the MEC. 
+                        The continued effectiveness of our method directly translates to increased sample-efficiency and convergence speed, and is apparent for all examined datasets.
+                        <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
+                            <img src="../img/AIT/DSDI_Performance15.png" style="width: 90%; max-width: 900px; margin:auto;">
+                        </div>
+
+                        <h3>Distribution of selected Intervention Targets</h3>
+                        The careful study of the behaviour of the proposed method under our chosen synthetic graphs enable us to reason about the method's underlying dynamics. 
+                        Analysing the dynamics of intervention targeting reveals that the distribution of target node selections is linked to the topology of the underlying graph. 
+                        More specifically, the number of selections of a given target node strongly correlates with its out-degree and number of descendants in the underlying ground-truth 
+                        graph structure. That our method prefers interventions on nodes with greater (downstream) impact on the overall system can 
+                        be most clearly observed in the distribution of target selection on the example of the synthetic \texttt{jungle} graph .
+                        <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
+                            <img src="../img/AIT/DSDI_CorrelationPlot_15.png" style="width: 90%; max-width: 900px; margin:auto;">
+                        </div>
+
+                        <h3>Improved Robustness in Noise-Perturbed Environments</h3>
+                        Considering that noise significantly impairs the performance of causal discovery, we examine the performance of active intervention targeting in noise-perturbed environments 
+                        with respect to SHD and convergence speed and compare it with random intervention targeting. We conduct experiments under different noise levels in the setting of binary data 
+                        generated from structured and random graphs of varying density. A noise level $\eta$ denotes the probability of flipping a random variable and applying it to all measured 
+                        variables of observational and interventional samples. Through all examined settings, we observe that active intervention targeting significantly improves identifiability in 
+                        contrast to random targeting. The observed performance boost is clearly noticeable in the convergence speed. While the convergence-gap gets more significant with an increasing noise level, 
+                        random targeting does not converge to the ground-truth graphs for all graphs with a noise level higher than $\eta = 0.02$. In contrast, AIT still converges to the correct graph and shows even a convergence tendency for $\eta = 0.05$. 
+                        These findings support our observation from different experiments that active intervention targeting leads to a more controlled and robust graph discovery.
+                        <div style="display: flex; margin-bottom: 10px; margin-top: 20px;">
+                            <img src="../img/AIT/DSDI_Noise.png" style="width: 90%; max-width: 900px; margin:auto;">
+                        </div>
+
+                        <h3>More results coming soon ...</h3>
+                        <ul>
+                            <li style="background-color: rgb(241, 158, 158); padding-top: 20px; padding-bottom: 20px;">
+                                Site is currently under construction... more results will follow soon!
+                            </li>
+                        </ul>
+                        <br>
+
+                    <h2><span class="b-color">Promising Results</span> for Further Developments</h2>
+                    Promising results have driven the recent surge of interest in differentiable methods for causal structure learning from observational and interventional data. 
+                    In this work, we augment existing neural causal discovery methods with the ability to actively intervene and propose an active learning method to choose interventions. 
+                    We show in a systematic empirical study across multiple noise-free and noise-perturbed datasets that active intervention targeting not only improves sample efficiency 
+                    but also the identification of the underlying causal structures compared to random intervention targeting. Our results indicate that the guided selection of intervention 
+                    targets leads to a more controlled discovery with favourable properties with respect to the optimization. The increased performance boost for larger graphs is in line with 
+                    our expectation as random intervention targeting scales poorly to graphs of larger size.
+
+                    </div>
+
+                    <div class="research">
+                        <br><br>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

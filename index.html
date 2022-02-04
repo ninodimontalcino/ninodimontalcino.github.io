@@ -20,7 +20,7 @@
         <style type="text/css">
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,500,600display=swap');
             @-ms-viewport{ width: device-width; }
-            html, body {margin: 0px; padding: 0px; font-size: 14px;}
+            html, body {margin: 0px; padding: 0px; font-size: 15px; }
             body {height:100%; width:100%; font-family: 'Open Sans', sans-serif;}
             ul {list-style: outside none none; padding: 0px}
             li {margin-bottom: 10px; background: #e89d2d12; padding: 15px; border-radius: 5px; display:block; border-left: 5px solid rgb(143, 64, 11, 0.33);}
@@ -36,10 +36,11 @@
             .highlight {padding: 1px 3px 1px 3px; background: #e89d2d12; border-radius: 5px;}
             .academic-link-box { margin-bottom: 0px; float:left; margin:2px; padding: 8px 12px 8px 12px; background: #e89d2d12; border-radius: 5px; border: 0.5px solid rgb(161, 105, 0);}
             .academic-link-box:hover {background: #e89d2d4f;}
-            .research {margin-top: 30px; text-align: left;}
+            .research {margin-top: 30px; text-align: left; justify-content: center; }
             .research-br {display: block; content: ""; margin: 3px 0;}
             .research-item-img {width: 300px; max-width: 95%; margin:auto;}
             .b-personal {    color: black !important; font-weight: 600;}
+            .b-color {color:rgb(143, 64, 11);}
             .li-talks{padding: 10px;}
             .box-interest {padding: 5px 10px;  margin: 2px 5px; background: #e89d2d12; border-radius: 5px; border: 0.5px solid rgb(161, 105, 0, .8); color:rgb(143, 64, 11); }
             .box-topic {margin-top: 25px;}
@@ -109,7 +110,7 @@
                     <div class="research">
                         <h2>Fields of Interest</h2>
                         <div class="flex-box">
-                            <span class="box-interest">Causal Inference</span>
+                            <span class="box-interest">Causal Inference <b>X</b> Machine Learning</span>
                             <span class="box-interest">Reinforcement learning</span>
                             <span class="box-interest">Meta Learning</span>
                             <span class="box-interest">Representation Learning</span>
@@ -122,10 +123,10 @@
                             <li>
                                 <div class="flex-container">
                                     <div class="flex-item-left">
-                                        <b><a href="https://arxiv.org/abs/2109.02429">Learning Neural Causal Models with Active Interventions</a></b><br class="research-br">
+                                        <b><a href="blog/learning_neural_causal_models_with_active_interventions.html">Learning Neural Causal Models with Active Interventions</a></b><br class="research-br">
                                         <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br>
                                         Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
-                                        <a href="https://arxiv.org/abs/2109.02429">[Paper]</a> <a href="">[Blog - coming soon]</a>
+                                        <a href="https://arxiv.org/abs/2109.02429">[Paper]</a> <a href="blog/learning_neural_causal_models_with_active_interventions.html">[Blog]</a>
                                         <div class="box-topic flex-box">
                                             <div class="box-item-topic">Causal Discovery</div>
                                             <div class="box-item-topic">Active Learning</div>
@@ -133,7 +134,7 @@
                                         
                                     </div>
                                     <div class="flex-item-right">
-                                        <img src="img/AIT.png" class="research-item-img">
+                                        <img src="img/AIT/AIT.png" class="research-item-img">
                                     </div>   
                                 </div>
                             </li>
@@ -163,6 +164,7 @@
                                         <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
                                         <div class="box-topic flex-box">
                                             <div class="box-item-topic">Medical Image Analysis</div>
+                                            <div class="box-item-topic">Semantic Segmentation</div>
                                         </div>
                                     </div>
                                     <div class="flex-item-right">
