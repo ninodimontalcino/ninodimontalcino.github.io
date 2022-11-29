@@ -23,28 +23,28 @@
             html, body {margin: 0px; padding: 0px; font-size: 14px; }
             body {height:100%; width:100%; font-family: 'Open Sans', sans-serif;}
             ul {list-style: outside none none; padding: 0px}
-            li {margin-bottom: 10px; background: #e89d2d12; padding: 15px; border-radius: 5px; display:block; border-left: 5px solid rgb(143, 64, 11, 0.33);}
+            li {margin-bottom: 10px; background: #a5967f12; padding: 15px; border-radius: 0px; display:block; border-left: 5px solid rgb(143, 64, 11, 0.33);}
             li > .flex-container > .flex-item-left > b{font-size: 14px; color:rgb(143, 64, 11); }
             li:last-child {margin-bottom: 0px;}
             a {color:rgb(143, 64, 11); text-decoration: none; font-weight: 500; }
             .full {height: 100%; width:100%; background-color: rgba(250, 240, 214, 0.103); position: relative; margin: auto;}
-            .box-main {width: 95%; max-width: 900px;  margin: auto; border-radius: 10px; position: absolute; top: 0; bottom: 0; left: 0; right: 0;} 
+            .box-main {width: 95%; max-width: 900px;  margin: auto; border-radius: 0px; position: absolute; top: 0; bottom: 0; left: 0; right: 0;} 
             .box-left {width: auto; text-align: center; margin-top: 2px; padding: 10px; }
             .box-right {text-align: center; margin-top: 20px; padding: 0px; width: 100%; display: flex; justify-content: center;}
-            .portrait {border-radius: 5px;; max-height: 150px; min-height: 100px; margin-top: 40px; }
+            .portrait {border-radius: 0px;; max-height: 150px; min-height: 100px; margin-top: 40px; }
             .linear-grad-3 { background-image: linear-gradient(to bottom right, rgb(194 194 194), rgb(248 248 249), #a9a9a9);}
-            .highlight {padding: 1px 3px 1px 3px; background: #e89d2d12; border-radius: 5px;}
-            .academic-link-box { margin-bottom: 0px; float:left; margin:2px; padding: 8px 12px 8px 12px; background: #e89d2d12; border-radius: 5px; border: 0.5px solid rgb(161, 105, 0);}
+            .highlight {padding: 1px 3px 1px 3px; background: #e89d2d12; border-radius: 0px;}
+            .academic-link-box { margin-bottom: 0px; float:left; margin:2px; padding: 8px 12px 8px 12px; background: #e89d2d12; border-radius: 0px; border: 0.5px solid rgb(161, 105, 0);}
             .academic-link-box:hover {background: #e89d2d4f;}
             .research {margin-top: 30px; text-align: left; justify-content: center; }
-            .research-br {display: block; content: ""; margin: 3px 0;}
-            .research-item-img {width: 300px; max-width: 95%; margin:auto;}
+            .research-br {display: block; content: ""; margin: 7px 0;}
+            .research-item-img {width: 300px; max-width: 95%; max-height: 200px; margin:auto;}
             .b-personal {    color: black !important; font-weight: 600;}
             .b-color {color:rgb(143, 64, 11);}
             .li-talks{padding: 10px;}
-            .box-interest {padding: 5px 10px;  margin: 2px 5px; background: #e89d2d12; border-radius: 5px; border: 0.5px solid rgb(161, 105, 0, .8); color:rgb(143, 64, 11); }
+            .box-interest {padding: 5px 10px;  margin: 2px 5px; background: #e89d2d12; border-radius: 0px; border: 0.5px solid rgb(161, 105, 0, .8); color:rgb(143, 64, 11); }
             .box-topic {margin-top: 25px;}
-            .box-item-topic {padding: 3px 7px;  margin: 5px 5px; background: #ebcc9e44; border-radius: 5px; color:rgb(143, 64, 11); }
+            .box-item-topic {padding: 3px 7px;  margin: 5px 5px; background: #ebcc9e44; border-radius: 0px; color:rgb(143, 64, 11); }
 
             * {box-sizing: border-box;}
             .flex-box {display: flex; flex-wrap: wrap; text-align: center; justify-content: center; margin-top:20px;}
@@ -126,9 +126,27 @@
                             <li>
                                 <div class="flex-container">
                                     <div class="flex-item-left">
+                                        <b><a href="https://arxiv.org/abs/2206.04620">Trust Your &nabla;: Gradient-based Intervention Targeting for Causal Discovery</a></b><br class="research-br">
+                                        Mateusz Olko*, Michał Zając*, Aleksandra Nowak*, <b class="b-personal">Nino Scherrer</b>, Yashas Annadani, Stefan Bauer, Łukasz Kuciński, Piotr Miłoś <br class="research-br">
+                                        Preprint (arXiv) & NeurIPS 2022 Workshop on Causality for Real-world Impact , <br class="research-br">
+                                        <a href="https://arxiv.org/abs/2211.13715">[Paper]</a>
+                                        <div class="box-topic flex-box">
+                                            <div class="box-item-topic">Causal Discovery</div>
+                                            <div class="box-item-topic">Experimental Design</div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="flex-item-right">
+                                        <img src="img/GIT.png" class="research-item-img">
+                                    </div>   
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex-container">
+                                    <div class="flex-item-left">
                                         <b><a href="https://arxiv.org/abs/2206.04620">On the Generalization and Adaption Performance of Causal Models</a></b><br class="research-br">
-                                        <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Stefan Bauer, Yoshua Bengio, & Nan Rosemary Ke, <br>
-                                        Preprint (arXiv), <br class="research-br">
+                                        <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Stefan Bauer, Yoshua Bengio, & Nan Rosemary Ke, <br class="research-br">
+                                        Preprint (arXiv) & ICML 2022 - SCIS and BeyondBayes Workshop, <br class="research-br">
                                         <a href="https://arxiv.org/abs/2206.04620">[Paper]</a>
                                         <div class="box-topic flex-box">
                                             <div class="box-item-topic">Causal Models</div>
@@ -137,7 +155,7 @@
                                         
                                     </div>
                                     <div class="flex-item-right">
-                                        <img src="" class="research-item-img">
+                                        <img src="img/Gen+Adapt.png" class="research-item-img">
                                     </div>   
                                 </div>
                             </li>
@@ -145,12 +163,12 @@
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="blog/learning_neural_causal_models_with_active_interventions.html">Learning Neural Causal Models with Active Interventions</a></b><br class="research-br">
-                                        <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br>
+                                        <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br class="research-br">
                                         Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
                                         <a href="https://arxiv.org/abs/2109.02429">[Paper]</a> <a href="blog/learning_neural_causal_models_with_active_interventions.html">[Blog]</a>
                                         <div class="box-topic flex-box">
                                             <div class="box-item-topic">Causal Discovery</div>
-                                            <div class="box-item-topic">Active Learning</div>
+                                            <div class="box-item-topic">Experimental Design</div>
                                         </div>
                                         
                                     </div>
@@ -163,7 +181,7 @@
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="https://arxiv.org/abs/2106.07635">Variational Causal Networks: Approximate Bayesian Inference over Causal Structures</a></b><br class="research-br">
-                                        Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br>
+                                        Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br class="research-br">
                                         Preprint (arXiv) & KDD - BCIRWIS Workshop, 2021,<br class="research-br">
                                         <a href="https://arxiv.org/abs/2106.07635">[Paper]</a> <a href="https://github.com/yannadani/vcn_pytorch">[Code]</a> 
                                         <div class="box-topic flex-box">
@@ -180,7 +198,7 @@
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Improved Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with Synthetically Enhanced Deep Learning</a></b> <br class="research-br">
-                                        Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian Macclaren, Maarten Lansberg & Sebastian Kozerke,<br>
+                                        Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian Macclaren, Maarten Lansberg & Sebastian Kozerke,<br class="research-br">
                                         Radiology: Artificial Intelligence, 2020, <br class="research-br">
                                         <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
                                         <div class="box-topic flex-box">
@@ -199,6 +217,7 @@
                     <div class="research">
                         <h2>Talks</h2>
                         <ul>
+                            <li class="li-talks"><b>December 2022:</b>  "On the Synergies of Causality and DeepLearning", Neuroscience in ML Seminar, ETH Zurich</li>
                             <li class="li-talks"><b>April 2022:</b>  "Learning Neural Causal Models with Active Interventions", XAI seminar series, Imperial College London</li>
                             <li class="li-talks"><b>October 2021:</b>  "Learning Neural Causal Models with Active Interventions", Causality Reading Group, TU Darmstadt</li>
                         </ul>
