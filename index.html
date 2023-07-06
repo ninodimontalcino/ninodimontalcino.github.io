@@ -21,16 +21,17 @@
             @-ms-viewport{ width: device-width; }
             html, body {margin: 0px; padding: 0px; font-size: 15px; background: #f8f8f829; }
             body {height:100%; width:100%; font-family: 'Open Sans', sans-serif;}
-            ul {list-style: outside none none; padding: 0px}
-            li {margin-bottom: 15px; background: white; padding: 5px; border-radius: 0px; display:block; border-left: 5px solid rgb(2 34 122 / 82%); box-shadow: 0.01em 0.01em 0.4em rgb(0 0 0 / 20%); margin-bottom: 20px;}
+            ul {list-style-type: disc; padding: 0px}
+            li {margin-bottom: 15px; background: white; padding: 5px; border-radius: 0px; border-left: 5px solid rgb(2 34 122 / 82%); box-shadow: 0.01em 0.01em 0.4em rgb(0 0 0 / 20%); margin-bottom: 20px;}
             li > .flex-container > .flex-item-left > b{font-size: 14px; color:rgb(143, 64, 11); }
             li:last-child {margin-bottom: 0px;}
             a {color:darkblue; text-decoration: none; font-weight: 500; }
             .full {height: 100%; width:100%; background-color: rgba(250, 240, 214, 0.103); position: relative; margin: auto;}
             .box-main {width: 95%; max-width: 900px;  margin: auto; border-radius: 0px; position: absolute; top: 0; bottom: 0; left: 0; right: 0;} 
             .box-left {width: auto; text-align: left; margin-top: 2px; padding: 10px; }
-            .box-right {text-align: left; margin-top: 20px; padding: 0px; width: 100%; display: flex; justify-content: left;}
-            .portrait {border-radius: 0px;; max-height: 175px; min-height: 100px; margin-top: 40px;     box-shadow: 0.05em 0.05em 1em rgb(0 0 0 / 30%);}
+            .box-right {text-align: left; margin-top: 0px; padding: 0px; width: 100%; display: flex; justify-content: left;}
+            .box-top {text-align: left; margin-top: 20px; padding: 0px; width: 100%; display: flex; justify-content: right; font-size: 17px;}
+            .portrait {border-radius: 0px;; max-height: 175px; min-height: 100px; margin-top: 20px;     box-shadow: 0.05em 0.05em 1em rgb(0 0 0 / 30%); margin-left:10px;}
             .linear-grad-3 { background-image: linear-gradient(to bottom right, rgb(194 194 194), rgb(248 248 249), #a9a9a9);}
             .highlight {padding: 1px 3px 1px 3px; border-radius: 0px;}
             .academic-link-box { margin-bottom: 0px; float:left; margin:10px; padding: 8px 12px 8px 12px; background: white; border-radius: 0px;  box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);}
@@ -44,6 +45,9 @@
             .box-interest {padding: 10px 10px;  margin: 4px 10px; background: white; border-radius: 0px; border-left: 0px solid rgb(2 34 122 / 82%); box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);}
             .box-topic {margin-top: 25px;}
             .box-item-topic {padding: 3px 7px;  margin: 5px 5px; background: #b6cdfa44; border-radius: 0px; color: darkblue; }
+            .positions{margin-bottom: 2px; margin-left:20px; background: none; padding: 0px; border-radius: 0px; border-left: 0px; box-shadow: none; margin-bottom: 5px;}
+            .navigaton-link{padding: 10px;}
+            .li-container {display: block;}
 
             * {box-sizing: border-box;}
             .flex-box {display: flex; flex-wrap: wrap; text-align: left; justify-content: left; margin-top:20px;}
@@ -57,11 +61,14 @@
             }
 
             @media only screen and (max-width: 600px) {
-                .academic-link-box {width:60%; margin: 5px; }
-                .box-interest{width: 60%; margin: 2px 10px;}
+                .academic-link-box {
+                    width: 80%;
+                    margin: auto, auto, auto, auto;
+                    text-align: center;
+                }
+                .box-interest{width: 80%;  text-align: center; margin: auto, auto, auto, auto;}
             }
 
-            .positions {margin-bottom: 2px; background: none; padding: 0px; border-radius: 0px; display:block; border-left: 0px; box-shadow: none; margin-bottom: 5px;}
 
         </style>
 
@@ -79,7 +86,12 @@
     <body>
         <div class="full">
             <div class="box-main ">
-                <div class="box-right">
+                <div class="box-top">
+                   <a class="navigaton-link" href="#about">About</a> 
+                   <a class="navigaton-link" href="#research">Resarch</a>
+                   <a class="navigaton-link" href="#log">Nino's Log</a>
+                </div>
+                <div class="box-right" id="about">
                     <img class="portrait" src="portrait.jpeg" alt="Nino Scherrer Portrait">
                 </div>
                 <div class="box-left">
@@ -92,13 +104,13 @@
                     <p>   
                     Previously, ...
                     <ul>
-                        <li class="positions">- Research intern at the <a class="highlight" href="https://vectorinstitute.ai/">Vector Institute</a> (hosted by <a class="highlight" href="https://animesh.garg.tech/">Prof. Animesh Garg</a>) </li>
-                        <li class="positions">- Research intern at <a class="highlight" href="https://mila.quebec/en/">Mila</a> (hosted by <a class="highlight" href="https://scholar.google.ca/citations?user=dxwPYhQAAAAJ">Nan Rosemary Ke</a> and
+                        <li class="positions">Research intern at the <a class="highlight" href="https://vectorinstitute.ai/">Vector Institute</a> (hosted by <a class="highlight" href="https://animesh.garg.tech/">Prof. Animesh Garg</a>) </li>
+                        <li class="positions">Research intern at <a class="highlight" href="https://mila.quebec/en/">Mila</a> (hosted by <a class="highlight" href="https://scholar.google.ca/citations?user=dxwPYhQAAAAJ">Nan Rosemary Ke</a> and
                             <a class="highlight" href="https://scholar.google.com/citations?user=kukA0LcAAAAJ">Prof. Yoshua Bengio</a>)</li>
-                        <li class="positions">- Master thesis at <a class="highlight" href="https://ei.is.mpg.de/">MPI for Intelligent Systems</a> (hosted by <a class="highlight" href="https://scholar.google.com/citations?user=O-oICE8AAAAJ"> Prof. Stefan Bauer</a> and <a class="highlight" href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ&hl=en">Prof. Bernhard Schölkopf</a>)</li>
-                        <li class="positions">- Masters and Bachelors in computer science at <a class="highlight" href="https://ethz.ch/en.html">ETH&nbsp;Zürich</a></li>
-                        <li class="positions">- Systems engineer for multiple years at <a class="highlight" href="https://www.sfs.com/ch/en/">SFS AG</a></li>
-                        <li class="positions">- Diploma (vocational education) in computer science</li>
+                        <li class="positions">Master thesis at <a class="highlight" href="https://ei.is.mpg.de/">MPI for Intelligent Systems</a> (hosted by <a class="highlight" href="https://scholar.google.com/citations?user=O-oICE8AAAAJ"> Prof. Stefan Bauer</a> and <a class="highlight" href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ&hl=en">Prof. Bernhard Schölkopf</a>)</li>
+                        <li class="positions">Masters and Bachelors in computer science at <a class="highlight" href="https://ethz.ch/en.html">ETH&nbsp;Zürich</a></li>
+                        <li class="positions">Systems engineer for multiple years at <a class="highlight" href="https://www.sfs.com/ch/en/">SFS AG</a></li>
+                        <li class="positions">Diploma (vocational education) in computer science</li>
                     </ul>  
                         </p>
                     <div class="flex-box">
@@ -125,7 +137,7 @@
                         -->
                     </div>
                     
-                    <div class="research">
+                    <div class="research" >
                         <h2>Fields of Interest</h2>
                         <div class="flex-box">
                             <span class="box-interest">Synergies of Causality and Deep Learning</span>
@@ -135,10 +147,10 @@
                         </div>   
                     </div>
 
-                    <div class="research">
+                    <div class="research" id="research">
                         <h2>Research</h2>
                         <ul>
-                            <li>
+                            <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="">Evaluating the Moral Beliefs Encoded in LLMs</a></b><br class="research-br">
@@ -153,11 +165,11 @@
                                         
                                     </div>
                                     <div class="flex-item-right">
-                                        <!-- <img src="img/GIT.png" class="research-item-img"> -->
+                                        <img src="img/moralchoice_correlation_plot.png" class="research-item-img">
                                     </div>   
                                 </div>
                             </li>
-                            <li>
+                            <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="https://arxiv.org/abs/2206.04620">Trust Your &nabla;: Gradient-based Intervention Targeting for Causal Discovery</a></b><br class="research-br">
@@ -175,7 +187,7 @@
                                     </div>   
                                 </div>
                             </li>
-                            <li>
+                            <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="https://arxiv.org/abs/2206.04620">On the Generalization and Adaption Performance of Causal Models</a></b><br class="research-br">
@@ -193,7 +205,7 @@
                                     </div>   
                                 </div>
                             </li>
-                            <li>
+                            <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="blog/learning_neural_causal_models_with_active_interventions.html">Learning Neural Causal Models with Active Interventions</a></b><br class="research-br">
@@ -211,7 +223,7 @@
                                     </div>   
                                 </div>
                             </li>
-                            <li>
+                            <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="https://arxiv.org/abs/2106.07635">Variational Causal Networks: Approximate Bayesian Inference over Causal Structures</a></b><br class="research-br">
@@ -228,7 +240,7 @@
                                     </div>   
                                 </div>
                              </li>
-                            <li>
+                            <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Improved Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with Synthetically Enhanced Deep Learning</a></b> <br class="research-br">
@@ -257,17 +269,17 @@
                     <div class="research">
                         <h2>Talks</h2>
                         <ul>
-                            <li class="positions"><b>- February 2023:</b>  "Deep Learning for Causality: Neural Causal Structure Learning", AI for Actionable Impact (AI4AI) Lab , Imperial College London</li>
-                            <li class="positions"><b>- January 2023:</b>  "On the Synergies of Causality and DeepLearning", Neuroscience in ML Seminar, ETH Zurich</li>
-                            <li class="positions"><b>- April 2022:</b>  "Learning Neural Causal Models with Active Interventions", XAI seminar series, Imperial College London</li>
-                            <li class="positions"><b>- October 2021:</b>  "Learning Neural Causal Models with Active Interventions", Causality Reading Group, TU Darmstadt</li>
+                            <li class="positions"><b>February 2023:</b>  "Deep Learning for Causality: Neural Causal Structure Learning", AI for Actionable Impact (AI4AI) Lab , Imperial College London</li>
+                            <li class="positions"><b>January 2023:</b>  "On the Synergies of Causality and DeepLearning", Neuroscience in ML Seminar, ETH Zurich</li>
+                            <li class="positions"><b>April 2022:</b>  "Learning Neural Causal Models with Active Interventions", XAI seminar series, Imperial College London</li>
+                            <li class="positions"><b>October 2021:</b>  "Learning Neural Causal Models with Active Interventions", Causality Reading Group, TU Darmstadt</li>
                         </ul>
                     </div>
-                    <div class="research">
+                    <div class="research"  id="log">
                         <h2>Nino's Log</h2>
-                        Inspired by <a href="https://lilianweng.github.io/">Liliam Weng's Log</a>, I am starting to "log" my learning notes in the field of AI.
+                        Heavily inspired by <a href="https://lilianweng.github.io/">Liliam Weng's Log</a>, I am starting to "log" my learning notes in the field of AI.
                         <ul>
-                            <li>
+                            <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
                                         <b><a href="">Surveying Language Models</a></b> (Coming soon)<br class="research-br">
