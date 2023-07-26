@@ -1,326 +1,610 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Nino Scherrer</title>
 
-        <!-- META STUFF-->
-        <meta charset="utf-8">
-        <meta name="author" content="Nino Scherrer">
-        <meta name="description" content="I am doing research in AI. My research interest centers around machine learning, causality, NLP and AI safety/ethics.">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<head>
+    <title>Nino Scherrer</title>
 
-        <!-- STYLING -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-        <style type="text/css">
-            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,500,600display=swap');
-            @-ms-viewport{ width: device-width; }
-            html, body {margin: 0px; padding: 0px; font-size: 15px; background: #f8f8f829; }
-            body {height:100%; width:100%; font-family: 'Open Sans', sans-serif;}
-            ul {list-style-type: disc; padding: 0px}
-            li {margin-bottom: 15px; background: white; padding: 5px; border-radius: 0px; box-shadow: 0.01em 0.01em 0.4em rgb(0 0 0 / 20%); margin-bottom: 20px;}
-            li > .flex-container > .flex-item-left > b{font-size: 14px; color:rgb(143, 64, 11); }
-            li:last-child {margin-bottom: 0px;}
-            a {color:darkblue; text-decoration: none; font-weight: 500; }
-            .full {height: 100%; width:100%; background-color: rgba(250, 240, 214, 0.103); position: relative; margin: auto;}
-            .box-main {width: 95%; max-width: 900px;  margin: auto; border-radius: 0px; position: absolute; top: 0; bottom: 0; left: 0; right: 0;} 
-            .box-left {width: auto; text-align: left; margin-top: 2px; padding: 10px; }
-            .box-right {text-align: left; margin-top: 0px; padding: 0px; width: 100%; display: flex; justify-content: left;}
-            .box-top {text-align: left; margin-top: 20px; padding: 0px; width: 100%; display: flex; justify-content: right; font-size: 17px;}
-            .portrait {border-radius: 0px;; max-height: 175px; min-height: 100px; margin-top: 20px;     box-shadow: 0.05em 0.05em 1em rgb(0 0 0 / 30%); margin-left:10px;}
-            .linear-grad-3 { background-image: linear-gradient(to bottom right, rgb(194 194 194), rgb(248 248 249), #a9a9a9);}
-            .highlight {padding: 1px 3px 1px 3px; border-radius: 0px;}
-            .academic-link-box { margin-bottom: 0px; float:left; margin:10px; padding: 8px 12px 8px 12px; background: white; border-radius: 0px;  box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);}
-            .academic-link-box:hover {background: #e89d2d4f; box-shadow: 0.05em 0.05em 0.4em rgb(161 105 0 / 30%);}
-            .research {margin-top: 30px; text-align: left; justify-content: center; }
-            .research-br {display: block; content: ""; margin: 7px 0;}
-            .research-item-img {width: 300px; max-width: 95%; max-height: 200px; margin:auto; display: block;}
-            .b-personal {    color: black !important; font-weight: 600;}
-            .b-color {color:rgb(143, 64, 11);}
-            .li-talks{padding: 10px;}
-            .box-interest {padding: 10px 10px;  margin: 4px 10px; background: white; border-radius: 0px; border-left: 0px solid rgb(2 34 122 / 82%); box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);}
-            .box-topic {margin-top: 25px;}
-            .box-item-topic {padding: 3px 7px;  margin: 5px 5px; background: #b6cdfa44; border-radius: 0px; color: darkblue; }
-            .positions{margin-bottom: 2px; margin-left:20px; background: none; padding: 0px; border-radius: 0px; border-left: 0px; box-shadow: none; margin-bottom: 5px;}
-            .navigaton-link{padding: 10px;}
-            .li-container {display: block; background: white;}
+    <!-- META STUFF-->
+    <meta charset="utf-8">
+    <meta name="author" content="Nino Scherrer">
+    <meta name="description"
+        content="I am doing research in AI. My research interest centers around machine learning, causality, NLP and AI safety/ethics.">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
-            * {box-sizing: border-box;}
-            .flex-box {display: flex; flex-wrap: wrap; text-align: left; justify-content: left; margin-top:20px;}
-            .flex-container { display: flex; flex-wrap: wrap; text-align: left;}
-            .flex-item-left { padding: 10px; flex: 60%;}
-            .flex-item-right { padding: 10px; flex: 30%;}s
+    <!-- STYLING -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400,500,600display=swap');
 
-            /* Responsive layout - makes a one column-layout instead of a two-column layout */
-            @media (max-width: 800px) {
-                .flex-item-right, .flex-item-left { flex: 100%;}
+        @-ms-viewport {
+            width: device-width;
+        }
+
+        html,
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-size: 15px;
+            background: #f8f8f829;
+        }
+
+        body {
+            height: 100%;
+            width: 100%;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding: 0px
+        }
+
+        li {
+            margin-bottom: 15px;
+            background: white;
+            padding: 5px;
+            border-radius: 0px;
+            box-shadow: 0.01em 0.01em 0.4em rgb(0 0 0 / 20%);
+            margin-bottom: 20px;
+        }
+
+        li>.flex-container>.flex-item-left>b {
+            font-size: 14px;
+            color: rgb(143, 64, 11);
+        }
+
+        li:last-child {
+            margin-bottom: 0px;
+        }
+
+        a {
+            color: darkblue;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .full {
+            height: 100%;
+            width: 100%;
+            background-color: rgba(250, 240, 214, 0.103);
+            position: relative;
+            margin: auto;
+        }
+
+        .box-main {
+            width: 95%;
+            max-width: 900px;
+            margin: auto;
+            border-radius: 0px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .box-left {
+            width: auto;
+            text-align: left;
+            margin-top: 2px;
+            padding: 10px;
+        }
+
+        .box-right {
+            text-align: left;
+            margin-top: 0px;
+            padding: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: left;
+        }
+
+        .box-top {
+            text-align: left;
+            margin-top: 20px;
+            padding: 0px;
+            width: 100%;
+            display: flex;
+            justify-content: right;
+            font-size: 17px;
+        }
+
+        .portrait {
+            border-radius: 0px;
+            ;
+            max-height: 175px;
+            min-height: 100px;
+            margin-top: 20px;
+            box-shadow: 0.05em 0.05em 1em rgb(0 0 0 / 30%);
+            margin-left: 10px;
+        }
+
+        .linear-grad-3 {
+            background-image: linear-gradient(to bottom right, rgb(194 194 194), rgb(248 248 249), #a9a9a9);
+        }
+
+        .highlight {
+            padding: 1px 3px 1px 3px;
+            border-radius: 0px;
+        }
+
+        .academic-link-box {
+            margin-bottom: 0px;
+            float: left;
+            margin: 10px;
+            padding: 8px 12px 8px 12px;
+            background: white;
+            border-radius: 0px;
+            box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);
+        }
+
+        .academic-link-box:hover {
+            background: #e89d2d4f;
+            box-shadow: 0.05em 0.05em 0.4em rgb(161 105 0 / 30%);
+        }
+
+        .research {
+            margin-top: 30px;
+            text-align: left;
+            justify-content: center;
+        }
+
+        .research-br {
+            display: block;
+            content: "";
+            margin: 7px 0;
+        }
+
+        .research-item-img {
+            width: 300px;
+            max-width: 95%;
+            max-height: 200px;
+            margin: auto;
+            display: block;
+        }
+
+        .b-personal {
+            color: black !important;
+            font-weight: 600;
+        }
+
+        .b-color {
+            color: rgb(143, 64, 11);
+        }
+
+        .li-talks {
+            padding: 10px;
+        }
+
+        .box-interest {
+            padding: 10px 10px;
+            margin: 4px 10px;
+            background: white;
+            border-radius: 0px;
+            border-left: 0px solid rgb(2 34 122 / 82%);
+            box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);
+        }
+
+        .box-topic {
+            margin-top: 25px;
+        }
+
+        .box-item-topic {
+            padding: 3px 7px;
+            margin: 5px 5px;
+            background: #b6cdfa44;
+            border-radius: 0px;
+            color: darkblue;
+        }
+
+        .positions {
+            margin-bottom: 2px;
+            margin-left: 20px;
+            background: none;
+            padding: 0px;
+            border-radius: 0px;
+            border-left: 0px;
+            box-shadow: none;
+            margin-bottom: 5px;
+        }
+
+        .navigaton-link {
+            padding: 10px;
+        }
+
+        .li-container {
+            display: block;
+            background: white;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .flex-box {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+            justify-content: left;
+            margin-top: 20px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            text-align: left;
+        }
+
+        .flex-item-left {
+            padding: 10px;
+            flex: 60%;
+        }
+
+        .flex-item-right {
+            padding: 10px;
+            flex: 30%;
+        }
+
+        s
+
+        /* Responsive layout - makes a one column-layout instead of a two-column layout */
+        @media (max-width: 800px) {
+
+            .flex-item-right,
+            .flex-item-left {
+                flex: 100%;
+            }
+        }
+
+        @media only screen and (max-width: 600px) {
+            .academic-link-box {
+                width: 80%;
+                margin: auto, auto, auto, auto;
+                text-align: center;
             }
 
-            @media only screen and (max-width: 600px) {
-                .academic-link-box {
-                    width: 80%;
-                    margin: auto, auto, auto, auto;
-                    text-align: center;
-                }
-                .box-interest{width: 80%;  text-align: center; margin: auto, auto, auto, auto;}
-
-                .flex-item-right {padding: 10px; flex: 100%; justify-content: center; display: flex;}
-                .flex-item-left { padding: 10px; flex: 60%; text-align: center; justify-content: center;}
-                .flex-box {display: flex; flex-wrap: wrap; text-align: left; justify-content: center; margin-top: 20px; text-align: center;}
-                }
+            .box-interest {
+                width: 80%;
+                text-align: center;
+                margin: auto, auto, auto, auto;
             }
 
+            .flex-item-right {
+                padding: 10px;
+                flex: 100%;
+                justify-content: center;
+                display: flex;
+            }
 
-        </style>
+            .flex-item-left {
+                padding: 10px;
+                flex: 60%;
+                text-align: center;
+                justify-content: center;
+            }
 
-        <!-- ANALYTICS -->
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9E9KCECL1F"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            .flex-box {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: left;
+                justify-content: center;
+                margin-top: 20px;
+                text-align: center;
+            }
+        }
+        }
+    </style>
 
-            gtag('config', 'G-9E9KCECL1F');
-        </script>
-    </head>
-    <body>
-        <div class="full">
-            <div class="box-main ">
-                <div class="box-top">
-                   <a class="navigaton-link" href="#about">About</a> 
-                   <a class="navigaton-link" href="#research">Resarch</a>
-                   <a class="navigaton-link" href="#log">Nino's Log</a>
-                </div>
-                <div class="box-right" id="about">
-                    <img class="portrait" src="portrait.jpeg" alt="Nino Scherrer Portrait">
-                </div>
-                <div class="box-left">
-                    <h1>Nino Scherrer</h1>
-                    <h4>nino.scherrer[at]gmail.com</h4>
-                    <p>I am currently a visiting researcher at <a class="highlight" href="https://alignmentfund.org/">FAR AI</a> and 
-                        working with <a class="highlight" href="https://www.claudiajshi.com/">Claudia Shi</a>,  
-                        <a class="highlight" href="https://www.amirfeder.com/">Amir Feder</a> and <a class="highlight" href="http://www.cs.columbia.edu/~blei/">Prof. David Blei</a> on new techniques for language model evaluations, and to elicit encoded values and biases from LLMs. 
-                    </p>
-                    <p>   
+    <!-- ANALYTICS -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9E9KCECL1F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-9E9KCECL1F');
+    </script>
+</head>
+
+<body>
+    <div class="full">
+        <div class="box-main ">
+            <div class="box-top">
+                <a class="navigaton-link" href="#about">About</a>
+                <a class="navigaton-link" href="#research">Resarch</a>
+                <a class="navigaton-link" href="#log">Nino's Log</a>
+            </div>
+            <div class="box-right" id="about">
+                <img class="portrait" src="portrait.jpeg" alt="Nino Scherrer Portrait">
+            </div>
+            <div class="box-left">
+                <h1>Nino Scherrer</h1>
+                <h4>nino.scherrer[at]gmail.com</h4>
+                <p>I am currently a visiting researcher at <a class="highlight" href="https://alignmentfund.org/">FAR
+                        AI</a>. I am working with <a class="highlight" href="https://www.claudiajshi.com/">Claudia
+                        Shi</a>, <a class="highlight" href="https://www.amirfeder.com/">Amir Feder</a> and <a
+                        class="highlight" href="http://www.cs.columbia.edu/~blei/">Prof. David Blei</a> on new
+                    techniques for language model evaluations, and to elicit encoded values and biases from
+                    LLMs.
+                </p>
+                <p>
                     Previously, ...
-                    <ul>
-                        <li class="positions">Research intern at the <a class="highlight" href="https://vectorinstitute.ai/">Vector Institute</a> (hosted by <a class="highlight" href="https://animesh.garg.tech/">Prof. Animesh Garg</a>) </li>
-                        <li class="positions">Research intern at <a class="highlight" href="https://mila.quebec/en/">Mila</a> (hosted by <a class="highlight" href="https://scholar.google.ca/citations?user=dxwPYhQAAAAJ">Nan Rosemary Ke</a> and
-                            <a class="highlight" href="https://scholar.google.com/citations?user=kukA0LcAAAAJ">Prof. Yoshua Bengio</a>)</li>
-                        <li class="positions">Master thesis at <a class="highlight" href="https://ei.is.mpg.de/">MPI for Intelligent Systems</a> (hosted by <a class="highlight" href="https://scholar.google.com/citations?user=O-oICE8AAAAJ"> Prof. Stefan Bauer</a> and <a class="highlight" href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ&hl=en">Prof. Bernhard Schölkopf</a>)</li>
-                        <li class="positions">Masters and Bachelors in computer science at <a class="highlight" href="https://ethz.ch/en.html">ETH&nbsp;Zürich</a></li>
-                        <li class="positions">Systems engineer for multiple years at <a class="highlight" href="https://www.sfs.com/ch/en/">SFS AG</a></li>
-                        <li class="positions">Diploma (vocational education) in computer science</li>
-                    </ul>  
-                        </p>
-                    <div class="flex-box">
-                        <br>
-                        <div class="academic-link-box" onclick="location.href='https://scholar.google.com/citations?user=CG9n26kAAAAJ&hl=en'" style="cursor:pointer">
-                            <a class="academic-link" href="https://scholar.google.com/citations?user=CG9n26kAAAAJ&hl=en">Google Scholar <i class="ai ai-google-scholar-square "></i></a> 
-                        </div>
-                        <div class="academic-link-box" onclick="location.href='https://www.semanticscholar.org/author/Nino-Scherrer/1742339548'" style="cursor:pointer">
-                            <a class="academic-link" href="https://www.semanticscholar.org/author/Nino-Scherrer/1742339548">Semantic Scholar <i class="ai ai-semantic-scholar-square "></i></a> 
-                        </div>
-                        <div class="academic-link-box" onclick="location.href='https://twitter.com/ninoscherrer'" style="cursor:pointer">
-                            <a class="academic-link" href="https://twitter.com/ninoscherrer">Twitter <i class="fa fa-twitter"></i></a>
-                        </div>
-                        <div class="academic-link-box" onclick="location.href='https://github.com/ninodimontalcino'" style="cursor:pointer">
-                            <a class="academic-link" href="https://github.com/ninodimontalcino">Github <i class="fa fa-github"></i></a> 
-                        </div>
-                        <div class="academic-link-box" onclick="location.href='https://ch.linkedin.com/in/ninoscherrer'" style="cursor:pointer">
-                            <a class="academic-link" href="https://ch.linkedin.com/in/ninoscherrer">Linkedin <i class="fa fa-linkedin-square"></i></a>
-                        </div> 
-                        <!-- 
+                <ul>
+                    <li class="positions">Research intern at the <a class="highlight"
+                            href="https://vectorinstitute.ai/">Vector Institute</a> (hosted by <a class="highlight"
+                            href="https://animesh.garg.tech/">Prof. Animesh Garg</a>) </li>
+                    <li class="positions">Research intern at <a class="highlight"
+                            href="https://mila.quebec/en/">Mila</a> (hosted by <a class="highlight"
+                            href="https://scholar.google.ca/citations?user=dxwPYhQAAAAJ">Nan Rosemary Ke</a> and
+                        <a class="highlight" href="https://scholar.google.com/citations?user=kukA0LcAAAAJ">Prof. Yoshua
+                            Bengio</a>)
+                    </li>
+                    <li class="positions">Master thesis at <a class="highlight" href="https://ei.is.mpg.de/">MPI for
+                            Intelligent Systems</a> (hosted by <a class="highlight"
+                            href="https://scholar.google.com/citations?user=O-oICE8AAAAJ"> Prof. Stefan Bauer</a> and <a
+                            class="highlight" href="https://scholar.google.com/citations?user=DZ-fHPgAAAAJ&hl=en">Prof.
+                            Bernhard Schölkopf</a>)</li>
+                    <li class="positions">Masters and Bachelors in computer science at <a class="highlight"
+                            href="https://ethz.ch/en.html">ETH&nbsp;Zürich</a></li>
+                    <li class="positions">Systems engineer for multiple years at <a class="highlight"
+                            href="https://www.sfs.com/ch/en/">SFS AG</a></li>
+                    <li class="positions">Diploma (vocational education) in computer science</li>
+                </ul>
+                </p>
+                <div class="flex-box">
+                    <br>
+                    <div class="academic-link-box"
+                        onclick="location.href='https://scholar.google.com/citations?user=CG9n26kAAAAJ&hl=en'"
+                        style="cursor:pointer">
+                        <a class="academic-link"
+                            href="https://scholar.google.com/citations?user=CG9n26kAAAAJ&hl=en">Google Scholar <i
+                                class="ai ai-google-scholar-square "></i></a>
+                    </div>
+                    <div class="academic-link-box"
+                        onclick="location.href='https://www.semanticscholar.org/author/Nino-Scherrer/1742339548'"
+                        style="cursor:pointer">
+                        <a class="academic-link"
+                            href="https://www.semanticscholar.org/author/Nino-Scherrer/1742339548">Semantic Scholar <i
+                                class="ai ai-semantic-scholar-square "></i></a>
+                    </div>
+                    <div class="academic-link-box" onclick="location.href='https://twitter.com/ninoscherrer'"
+                        style="cursor:pointer">
+                        <a class="academic-link" href="https://twitter.com/ninoscherrer">Twitter <i
+                                class="fa fa-twitter"></i></a>
+                    </div>
+                    <div class="academic-link-box" onclick="location.href='https://github.com/ninodimontalcino'"
+                        style="cursor:pointer">
+                        <a class="academic-link" href="https://github.com/ninodimontalcino">Github <i
+                                class="fa fa-github"></i></a>
+                    </div>
+                    <div class="academic-link-box" onclick="location.href='https://ch.linkedin.com/in/ninoscherrer'"
+                        style="cursor:pointer">
+                        <a class="academic-link" href="https://ch.linkedin.com/in/ninoscherrer">Linkedin <i
+                                class="fa fa-linkedin-square"></i></a>
+                    </div>
+                    <!-- 
                         <div class="academic-link-box" onclick="location.href=''" style="cursor:pointer">
                             <a class="academic-link" href="">CV <i class="ai ai-cv-square"></i></a>
                         </div> 
                         -->
-                    </div>
-                    
-                    <div class="research" >
-                        <h2>Fields of Interest</h2>
-                        <div class="flex-box">
-                            <span class="box-interest">Synergies of Causality and Deep Learning</span>
-                            <span class="box-interest">NLP</span>
-                            <span class="box-interest">AI Safety / AI Ethics</span>
-                            <span class="box-interest">Generalization / Robustness</span>
-                        </div>   
-                    </div>
-
-                    <div class="research" id="research">
-                        <h2>Research</h2>
-                        <h3 style="margin-top: 20px; ">- Language Model Evaluations / AI Safety</h3>
-                        <ul>
-                            <li class="li-container">
-                                <div class="flex-container">
-                                    <div class="flex-item-left">
-                                        <b><a href="">Evaluating the Moral Beliefs Encoded in LLMs</a></b><br class="research-br">
-                                        <b class="b-personal">Nino Scherrer*</b>, Claudia Shi*, Amir Feder, and David Blei <br class="research-br">
-                                        Preprint & In Submission <br class="research-br">
-                                        <a href="...">[Coming soon]</a>
-                                        <div class="box-topic flex-box">
-                                            <div class="box-item-topic">Language Model Evaluations</div>
-                                            <div class="box-item-topic">AI Safety / AI Ethics</div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="flex-item-right">
-                                        <img src="img/moralchoice_correlation_plot.png" class="research-item-img">
-                                    </div>   
-                                </div>
-                            </li>
-                        </div>
-                        <h3 style="margin-top: 20px;">- Causality / Machine Learning</h3>
-                        <ul>
-                            <li class="li-container">
-                                <div class="flex-container">
-                                    <div class="flex-item-left">
-                                        <b><a href="https://arxiv.org/abs/2206.04620">Trust Your &nabla;: Gradient-based Intervention Targeting for Causal Discovery</a></b><br class="research-br">
-                                        Mateusz Olko*, Michał Zając*, Aleksandra Nowak*, <b class="b-personal">Nino Scherrer</b>, Yashas Annadani, Stefan Bauer, Łukasz Kuciński, Piotr Miłoś <br class="research-br">
-                                        Preprint (arXiv) & NeurIPS 2022 Workshop on Causality for Real-world Impact <br class="research-br">
-                                        <a href="https://arxiv.org/abs/2211.13715">[Paper]</a>
-                                        <div class="box-topic flex-box">
-                                            <div class="box-item-topic">Causal Discovery</div>
-                                            <div class="box-item-topic">Experimental Design</div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="flex-item-right">
-                                        <img src="img/GIT.png" class="research-item-img">
-                                    </div>   
-                                </div>
-                            </li>
-                            <li class="li-container">
-                                <div class="flex-container">
-                                    <div class="flex-item-left">
-                                        <b><a href="https://arxiv.org/abs/2206.04620">On the Generalization and Adaption Performance of Causal Models</a></b><br class="research-br">
-                                        <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Stefan Bauer, Yoshua Bengio, & Nan Rosemary Ke, <br class="research-br">
-                                        Preprint (arXiv) & ICML 2022 - SCIS and BeyondBayes Workshop, <br class="research-br">
-                                        <a href="https://arxiv.org/abs/2206.04620">[Paper]</a>
-                                        <div class="box-topic flex-box">
-                                            <div class="box-item-topic">Causal Models</div>
-                                            <div class="box-item-topic">Generalization</div>
-                                            <div class="box-item-topic">Zero- and Few-Shot Adaptation</div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="flex-item-right">
-                                        <img src="img/Gen+Adapt.png" class="research-item-img">
-                                    </div>   
-                                </div>
-                            </li>
-                            <li class="li-container">
-                                <div class="flex-container">
-                                    <div class="flex-item-left">
-                                        <b><a href="blog/learning_neural_causal_models_with_active_interventions.html">Learning Neural Causal Models with Active Interventions</a></b><br class="research-br">
-                                        <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal, Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan Rosemary Ke, <br class="research-br">
-                                        Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
-                                        <a href="https://arxiv.org/abs/2109.02429">[Paper]</a> <a href="blog/learning_neural_causal_models_with_active_interventions.html">[Blog]</a>
-                                        <div class="box-topic flex-box">
-                                            <div class="box-item-topic">Causal Discovery</div>
-                                            <div class="box-item-topic">Experimental Design</div>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="flex-item-right">
-                                        <img src="img/AIT/AIT.png" class="research-item-img">
-                                    </div>   
-                                </div>
-                            </li>
-                            <li class="li-container">
-                                <div class="flex-container">
-                                    <div class="flex-item-left">
-                                        <b><a href="https://arxiv.org/abs/2106.07635">Variational Causal Networks: Approximate Bayesian Inference over Causal Structures</a></b><br class="research-br">
-                                        Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br class="research-br">
-                                        Preprint (arXiv) & KDD - BCIRWIS Workshop, 2021,<br class="research-br">
-                                        <a href="https://arxiv.org/abs/2106.07635">[Paper]</a> <a href="https://github.com/yannadani/vcn_pytorch">[Code]</a> 
-                                        <div class="box-topic flex-box">
-                                            <div class="box-item-topic">Causal Discovery</div>
-                                            <div class="box-item-topic">Variational Inference</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex-item-right">
-                                        <img src="img/VCN.png" class="research-item-img">
-                                    </div>   
-                                </div>
-                             </li>
-                        </ul>
-                        <h3 style="margin-top: 20px;">- Medical Image Analysis</h3>
-                        <ul>
-                            <li class="li-container">
-                                <div class="flex-container">
-                                    <div class="flex-item-left">
-                                        <b><a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Improved Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with Synthetically Enhanced Deep Learning</a></b> <br class="research-br">
-                                        Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian Macclaren, Maarten Lansberg & Sebastian Kozerke,<br class="research-br">
-                                        Radiology: Artificial Intelligence, 2020, <br class="research-br">
-                                        <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
-                                        <div class="box-topic flex-box">
-                                            <div class="box-item-topic">Medical Image Analysis</div>
-                                            <div class="box-item-topic">Semantic Segmentation</div>
-                                        </div>
-                                    </div>
-                                    <div class="flex-item-right">
-                                        <img src="img/SyntheticDiffusion.png" class="research-item-img">
-                                    </div>   
-                                </div>
-                            </li>
-                        </ul>
-                    </div> 
-
-                    <div class="research">
-                        <h2>Tutorial</h2>
-                        I contributed to the ICML 2022 Tutorial on <a href="https://sites.google.com/view/causalityanddeeplearning/start">"Causality and
-                         Deep Learning: Synergies, Challenges and the Future"</a>. The corresponding work (systematic survey) "Deep Learning for Causality: A Unifying Perspective on Neural Causal Structure Learning" will be released soon. In the meantime, you can find the slides here: <a href="https://drive.google.com/file/d/1wNyDm2j03YzVW7g8w5NkFdrMakw5lId5/view">Tutorial Slides</a>.
-                    </div>
-
-                    <div class="research">
-                        <h2>Talks</h2>
-                        <ul>
-                            <li class="positions"><b>February 2023:</b>  "Deep Learning for Causality: Neural Causal Structure Learning", AI for Actionable Impact (AI4AI) Lab , Imperial College London</li>
-                            <li class="positions"><b>January 2023:</b>  "On the Synergies of Causality and DeepLearning", Neuroscience in ML Seminar, ETH Zurich</li>
-                            <li class="positions"><b>April 2022:</b>  "Learning Neural Causal Models with Active Interventions", XAI seminar series, Imperial College London</li>
-                            <li class="positions"><b>October 2021:</b>  "Learning Neural Causal Models with Active Interventions", Causality Reading Group, TU Darmstadt</li>
-                        </ul>
-                    </div>
-                    <div class="research"  id="log">
-                        <h2>Nino's Log</h2>
-                        Heavily inspired by <a href="https://lilianweng.github.io/">Liliam Weng's Log</a>, I am starting to "log" my learning notes in the field of AI.
-                        <ul>
-                            <li class="li-container">
-                                <div class="flex-container">
-                                    <div class="flex-item-left">
-                                        <b><a href="">Surveying Language Models</a></b> (Coming soon)<br class="research-br">
-                                        ...
-                                    </div>
-                                    <div class="flex-item-right">
-                                        <!-- <img src="img/GIT.png" class="research-item-img"> -->
-                                    </div>   
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="research">
-                        <br><br>
-                    </div>
-                    <div class="research">
-                        <br><br>
-                        <div style="height: 0.1px; text-align: left">
-                            <span style="background-color: white; position: relative; top: -0.5em; padding:10px; color: black;">
-                              <b>Last Updated:</b> July 6th, 2023
-                            </span>
-                          </div>
-                        <br><br>
-                    </div>
-
-
                 </div>
+
+                <div class="research">
+                    <h2>Fields of Interest</h2>
+                    <div class="flex-box">
+                        <span class="box-interest">Causality / Machine Learning</span>
+                        <span class="box-interest">NLP</span>
+                        <span class="box-interest">AI Safety / AI Ethics</span>
+                        <span class="box-interest">Robustness</span>
+                        <span class="box-interest">Computational Social Science</span>
+                    </div>
+                </div>
+
+                <div class="research" id="research">
+                    <h2>Research</h2>
+                    <h3 style="margin-top: 20px; ">- Language Model Evaluations / AI Safety</h3>
+                    <ul>
+                        <li class="li-container">
+                            <div class="flex-container">
+                                <div class="flex-item-left">
+                                    <b><a href="">Evaluating the Moral Beliefs Encoded in LLMs</a></b><br
+                                        class="research-br">
+                                    <b class="b-personal">Nino Scherrer*</b>, Claudia Shi*, Amir Feder, and David Blei
+                                    <br class="research-br">
+                                    Preprint & In Submission <br class="research-br">
+                                    <a href="...">[Coming soon]</a>
+                                    <a href="https://github.com/ninodimontalcino/moralchoice">[Code]</a>
+                                    <a href="https://huggingface.co/datasets/ninoscherrer/moralchoice">[Dataset]</a>
+                                    <div class="box-topic flex-box">
+                                        <div class="box-item-topic">Language Model Evaluations</div>
+                                        <div class="box-item-topic">AI Safety / AI Ethics</div>
+                                    </div>
+
+                                </div>
+                                <div class="flex-item-right">
+                                    <img src="img/moralchoice_correlation_plot.png" class="research-item-img">
+                                </div>
+                            </div>
+                        </li>
+                </div>
+                <h3 style="margin-top: 20px;">- Causality / Machine Learning</h3>
+                <ul>
+                    <li class="li-container">
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <b><a href="https://arxiv.org/abs/2206.04620">Trust Your &nabla;: Gradient-based
+                                        Intervention Targeting for Causal Discovery</a></b><br class="research-br">
+                                Mateusz Olko*, Michał Zając*, Aleksandra Nowak*, <b class="b-personal">Nino
+                                    Scherrer</b>, Yashas Annadani, Stefan Bauer, Łukasz Kuciński, Piotr Miłoś <br
+                                    class="research-br">
+                                Preprint (arXiv) & NeurIPS 2022 Workshop on Causality for Real-world Impact <br
+                                    class="research-br">
+                                <a href="https://arxiv.org/abs/2211.13715">[Paper]</a>
+                                <div class="box-topic flex-box">
+                                    <div class="box-item-topic">Causal Discovery</div>
+                                    <div class="box-item-topic">Experimental Design</div>
+                                </div>
+
+                            </div>
+                            <div class="flex-item-right">
+                                <img src="img/GIT.png" class="research-item-img">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li-container">
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <b><a href="https://arxiv.org/abs/2206.04620">On the Generalization and Adaption
+                                        Performance of Causal Models</a></b><br class="research-br">
+                                <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Stefan Bauer, Yoshua Bengio, &
+                                Nan Rosemary Ke, <br class="research-br">
+                                Preprint (arXiv) & ICML 2022 - SCIS and BeyondBayes Workshop, <br class="research-br">
+                                <a href="https://arxiv.org/abs/2206.04620">[Paper]</a>
+                                <div class="box-topic flex-box">
+                                    <div class="box-item-topic">Causal Models</div>
+                                    <div class="box-item-topic">Generalization</div>
+                                    <div class="box-item-topic">Zero- and Few-Shot Adaptation</div>
+                                </div>
+
+                            </div>
+                            <div class="flex-item-right">
+                                <img src="img/Gen+Adapt.png" class="research-item-img">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li-container">
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <b><a href="blog/learning_neural_causal_models_with_active_interventions.html">Learning
+                                        Neural Causal Models with Active Interventions</a></b><br class="research-br">
+                                <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal,
+                                Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan
+                                Rosemary Ke, <br class="research-br">
+                                Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
+                                <a href="https://arxiv.org/abs/2109.02429">[Paper]</a> <a
+                                    href="blog/learning_neural_causal_models_with_active_interventions.html">[Blog]</a>
+                                <div class="box-topic flex-box">
+                                    <div class="box-item-topic">Causal Discovery</div>
+                                    <div class="box-item-topic">Experimental Design</div>
+                                </div>
+
+                            </div>
+                            <div class="flex-item-right">
+                                <img src="img/AIT/AIT.png" class="research-item-img">
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li-container">
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <b><a href="https://arxiv.org/abs/2106.07635">Variational Causal Networks: Approximate
+                                        Bayesian Inference over Causal Structures</a></b><br class="research-br">
+                                Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino
+                                    Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br class="research-br">
+                                Preprint (arXiv) & KDD - BCIRWIS Workshop, 2021,<br class="research-br">
+                                <a href="https://arxiv.org/abs/2106.07635">[Paper]</a> <a
+                                    href="https://github.com/yannadani/vcn_pytorch">[Code]</a>
+                                <div class="box-topic flex-box">
+                                    <div class="box-item-topic">Causal Discovery</div>
+                                    <div class="box-item-topic">Variational Inference</div>
+                                </div>
+                            </div>
+                            <div class="flex-item-right">
+                                <img src="img/VCN.png" class="research-item-img">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <h3 style="margin-top: 20px;">- Medical Image Analysis</h3>
+                <ul>
+                    <li class="li-container">
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <b><a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Improved
+                                        Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with
+                                        Synthetically Enhanced Deep Learning</a></b> <br class="research-br">
+                                Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna
+                                M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian
+                                Macclaren, Maarten Lansberg & Sebastian Kozerke,<br class="research-br">
+                                Radiology: Artificial Intelligence, 2020, <br class="research-br">
+                                <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
+                                <div class="box-topic flex-box">
+                                    <div class="box-item-topic">Medical Image Analysis</div>
+                                    <div class="box-item-topic">Semantic Segmentation</div>
+                                </div>
+                            </div>
+                            <div class="flex-item-right">
+                                <img src="img/SyntheticDiffusion.png" class="research-item-img">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
+
+            <div class="research">
+                <h2>Tutorial</h2>
+                I contributed to the ICML 2022 Tutorial on <a
+                    href="https://sites.google.com/view/causalityanddeeplearning/start">"Causality and
+                    Deep Learning: Synergies, Challenges and the Future"</a>. The corresponding work (systematic survey)
+                "Deep Learning for Causality: A Unifying Perspective on Neural Causal Structure Learning" will be
+                released soon. In the meantime, you can find the slides here: <a
+                    href="https://drive.google.com/file/d/1wNyDm2j03YzVW7g8w5NkFdrMakw5lId5/view">Tutorial Slides</a>.
+            </div>
+
+            <div class="research">
+                <h2>Talks</h2>
+                <ul>
+                    <li class="positions"><b>February 2023:</b> "Deep Learning for Causality: Neural Causal Structure
+                        Learning", AI for Actionable Impact (AI4AI) Lab , Imperial College London</li>
+                    <li class="positions"><b>January 2023:</b> "On the Synergies of Causality and DeepLearning",
+                        Neuroscience in ML Seminar, ETH Zurich</li>
+                    <li class="positions"><b>April 2022:</b> "Learning Neural Causal Models with Active Interventions",
+                        XAI seminar series, Imperial College London</li>
+                    <li class="positions"><b>October 2021:</b> "Learning Neural Causal Models with Active
+                        Interventions", Causality Reading Group, TU Darmstadt</li>
+                </ul>
+            </div>
+            <div class="research" id="log">
+                <h2>Nino's Log</h2>
+                Heavily inspired by <a href="https://lilianweng.github.io/">Liliam Weng's Log</a>, I am starting to
+                "log" my learning notes in the field of AI.
+                <ul>
+                    <li class="li-container">
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <b><a href="">Surveying Language Models</a></b> (Coming soon)<br class="research-br">
+                                ...
+                            </div>
+                            <div class="flex-item-right">
+                                <!-- <img src="img/GIT.png" class="research-item-img"> -->
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="research">
+                <br><br>
+            </div>
+            <div class="research">
+                <br><br>
+                <div style="height: 0.1px; text-align: left">
+                    <span style="background-color: white; position: relative; top: -0.5em; padding:10px; color: black;">
+                        <b>Last Updated:</b> July 6th, 2023
+                    </span>
+                </div>
+                <br><br>
+            </div>
+
+
         </div>
-    </body>
+    </div>
+    </div>
+</body>
 
 </html>
