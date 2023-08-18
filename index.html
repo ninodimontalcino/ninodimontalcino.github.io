@@ -29,7 +29,7 @@
         body {
             margin: 0px;
             padding: 0px;
-            font-size: 15px;
+            font-size: 14.5px;
             background: #f8f8f829;
         }
 
@@ -115,7 +115,6 @@
 
         .portrait {
             border-radius: 0px;
-            ;
             max-height: 175px;
             min-height: 100px;
             margin-top: 20px;
@@ -130,6 +129,7 @@
         .highlight {
             border-radius: 0px;
             color: black;
+            text-decoration: revert;
         }
 
         .highlight-company {
@@ -139,18 +139,22 @@
         }
 
         .academic-link-box {
+            color: darkblue;
             margin-bottom: 0px;
             float: left;
-            margin: 10px;
-            padding: 8px 12px 8px 12px;
+            margin: 10px 0px 0px 8px;
+            padding: 6px 10px 6px 10px;
             background: white;
             border-radius: 0px;
+            border: 1px solid darkblue;
+            /*
             box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);
+            */
         }
 
         .academic-link-box:hover {
-            background: #63afee4f;
-            box-shadow: 0.05em 0.05em 0.4em rgb(161 105 0 / 30%);
+            background: rgb(180, 180, 213);
+            
         }
 
         .research {
@@ -162,7 +166,7 @@
         .research-br {
             display: block;
             content: "";
-            margin: 9px 0;
+            margin: 12px 0;
         }
 
         .research-item-img {
@@ -187,12 +191,27 @@
         }
 
         .box-interest {
-            padding: 10px 10px;
+            padding: 0px 5px;
             margin: 4px 10px;
-            background: white;
             border-radius: 0px;
             border-left: 0px solid rgb(2 34 122 / 82%);
+            /*
+            background: white;
             box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);
+            */
+        }
+
+        .a-paper{
+            color: darkblue;
+            padding: 2px 4px;
+            margin: 5px 3px 0px 0px;
+            border: 1px solid darkblue;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .a-paper:hover{
+            background: rgb(180, 180, 213);
         }
 
         .box-topic {
@@ -201,10 +220,11 @@
 
         .box-item-topic {
             padding: 3px 7px;
-            margin: 5px 5px;
-            background: #b6cdfa44;
+            margin: 0px 5px 0px 0px;
+            background: #c7cff144;
             border-radius: 0px;
             color: darkblue;
+            font-size: 13px;
         }
 
         .positions {
@@ -248,14 +268,13 @@
         .flex-item-left {
             padding: 10px;
             flex: 60%;
+            font-size: 14.5px;
         }
 
         .flex-item-right {
             padding: 10px;
             flex: 30%;
         }
-
-        s
 
         /* Responsive layout - makes a one column-layout instead of a two-column layout */
         @media (max-width: 800px) {
@@ -302,7 +321,7 @@
                 text-align: center;
             }
         }
-        }
+        
     </style>
 
     <!-- ANALYTICS -->
@@ -336,8 +355,8 @@
                         AI</a>. I am working with <a class="highlight" href="https://www.claudiajshi.com/">Claudia
                         Shi</a>, <a class="highlight" href="https://www.amirfeder.com/">Amir Feder</a> and <a
                         class="highlight" href="http://www.cs.columbia.edu/~blei/">Prof. David Blei</a> on new
-                    techniques for language model evaluations, and to elicit encoded values and biases from
-                    LLMs.
+                    techniques for language model evaluations, and to elicit encoded values and biases from language
+                    models.
                 </p>
                 <p>
                     Previously, ...
@@ -405,11 +424,11 @@
                 <div class="research">
                     <h2>Fields of Interest</h2>
                     <div class="flex-box">
-                        <span class="box-interest">Causality / Machine Learning</span>
-                        <span class="box-interest">NLP</span>
+                        <span class="box-interest">Causality</span>
+                        <span class="box-interest">Natural Language Processing</span>
                         <span class="box-interest">AI Safety / AI Ethics</span>
                         <span class="box-interest">Robustness</span>
-                        <span class="box-interest">Computational Social Science</span>
+                        <span class="box-interest">Fairness</span>
                     </div>
                 </div>
 
@@ -422,15 +441,15 @@
                                 <div class="flex-item-left">
                                     <b><a href="https://arxiv.org/abs/2307.14324">Evaluating the Moral Beliefs Encoded
                                             in LLMs</a></b><br class="research-br">
-                                    <b class="b-personal">Nino Scherrer*</b>, Claudia Shi*, Amir Feder, and David Blei
-                                    <br class="research-br">
-                                    Preprint & In Submission <br class="research-br">
-                                    <a href="https://arxiv.org/abs/2307.14324">[Arxiv Paper]</a>
-                                    <a href="https://github.com/ninodimontalcino/moralchoice">[Code]</a>
-                                    <a href="https://huggingface.co/datasets/ninoscherrer/moralchoice">[Dataset]</a>
+                                    <b class="b-personal">Nino Scherrer*</b>, Claudia Shi*, Amir Feder, and David Blei<br class="research-br">
+                                    Under Review at NeurIPS 2023 <br class="research-br">
+                                    <a class="a-paper" href="https://arxiv.org/abs/2307.14324">Arxiv Paper</a>
+                                    <a class="a-paper" href="https://github.com/ninodimontalcino/moralchoice">Code</a>
+                                    <a class="a-paper" href="https://huggingface.co/datasets/ninoscherrer/moralchoice">Dataset</a>
                                     <div class="box-topic flex-box">
-                                        <div class="box-item-topic">Language Model Evaluations</div>
+                                        <div class="box-item-topic">LLM Evaluations</div>
                                         <div class="box-item-topic">AI Safety / AI Ethics</div>
+                                        <div class="box-item-topic">Consistency / Uncertainty</div>
                                     </div>
 
                                 </div>
@@ -448,13 +467,12 @@
                                 <b><a href="https://arxiv.org/abs/2211.13715">Trust Your &nabla;: Gradient-based
                                         Intervention Targeting for Causal Discovery</a></b><br class="research-br">
                                 Mateusz Olko*, Michał Zając*, Aleksandra Nowak*, <b class="b-personal">Nino
-                                    Scherrer</b>, Yashas Annadani, Stefan Bauer, Łukasz Kuciński, Piotr Miłoś <br
+                                    Scherrer</b>, Yashas Annadani, Stefan Bauer, Łukasz Kuciński, Piotr Miłoś <br class="research-br">
+                                    Under Review at NeurIPS 23 & NeurIPS 2022 Workshop on Causality for Real-world Impact <br
                                     class="research-br">
-                                Preprint (arXiv) & NeurIPS 2022 Workshop on Causality for Real-world Impact <br
-                                    class="research-br">
-                                <a href="https://arxiv.org/abs/2211.13715">[Paper]</a>
+                                <a class="a-paper" href="https://arxiv.org/abs/2211.13715">Paper</a>
                                 <div class="box-topic flex-box">
-                                    <div class="box-item-topic">Causal Discovery</div>
+                                    <div class="box-item-topic">Causal Structure Learning</div>
                                     <div class="box-item-topic">Experimental Design</div>
                                 </div>
 
@@ -471,12 +489,12 @@
                                         Performance of Causal Models</a></b><br class="research-br">
                                 <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Stefan Bauer, Yoshua Bengio, &
                                 Nan Rosemary Ke, <br class="research-br">
-                                Preprint (arXiv) & ICML 2022 - SCIS and BeyondBayes Workshop, <br class="research-br">
-                                <a href="https://arxiv.org/abs/2206.04620">[Paper]</a>
+                                ICML 2022 - SCIS and BeyondBayes Workshop, <br class="research-br">
+                                <a class="a-paper" href="https://arxiv.org/abs/2206.04620">Paper</a>
                                 <div class="box-topic flex-box">
                                     <div class="box-item-topic">Causal Models</div>
-                                    <div class="box-item-topic">Generalization</div>
-                                    <div class="box-item-topic">Zero- and Few-Shot Adaptation</div>
+                                    <div class="box-item-topic">Generalization / Robustness</div>
+                                    <div class="box-item-topic">Few-Shot Adaptation</div>
                                 </div>
 
                             </div>
@@ -493,11 +511,11 @@
                                 <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal,
                                 Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan
                                 Rosemary Ke, <br class="research-br">
-                                Preprint (arXiv) & NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
-                                <a href="https://arxiv.org/abs/2109.02429">[Paper]</a> <a
-                                    href="blog/learning_neural_causal_models_with_active_interventions.html">[Blog]</a>
+                                NeurIPS WHY-21 Workshop, 2021, <br class="research-br">
+                                <a class="a-paper" href="https://arxiv.org/abs/2109.02429">Paper</a>
+                                <a class="a-paper" href="blog/learning_neural_causal_models_with_active_interventions.html">Blog</a>
                                 <div class="box-topic flex-box">
-                                    <div class="box-item-topic">Causal Discovery</div>
+                                    <div class="box-item-topic">Causal Structure Learning</div>
                                     <div class="box-item-topic">Experimental Design</div>
                                 </div>
 
@@ -514,11 +532,11 @@
                                         Bayesian Inference over Causal Structures</a></b><br class="research-br">
                                 Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino
                                     Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br class="research-br">
-                                Preprint (arXiv) & KDD - BCIRWIS Workshop, 2021,<br class="research-br">
-                                <a href="https://arxiv.org/abs/2106.07635">[Paper]</a> <a
-                                    href="https://github.com/yannadani/vcn_pytorch">[Code]</a>
+                                KDD - BCIRWIS Workshop, 2021,<br class="research-br">
+                                <a class="a-paper" href="https://arxiv.org/abs/2106.07635">Paper</a>
+                                <a class="a-paper" href="https://github.com/yannadani/vcn_pytorch">Code</a>
                                 <div class="box-topic flex-box">
-                                    <div class="box-item-topic">Causal Discovery</div>
+                                    <div class="box-item-topic">Causal Structure Learning</div>
                                     <div class="box-item-topic">Variational Inference</div>
                                 </div>
                             </div>
@@ -540,7 +558,7 @@
                                 M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian
                                 Macclaren, Maarten Lansberg & Sebastian Kozerke,<br class="research-br">
                                 Radiology: Artificial Intelligence, 2020, <br class="research-br">
-                                <a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">[Paper]</a>
+                                <a class="a-paper" href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Paper</a>
                                 <div class="box-topic flex-box">
                                     <div class="box-item-topic">Medical Image Analysis</div>
                                     <div class="box-item-topic">Semantic Segmentation</div>
@@ -555,17 +573,23 @@
             </div>
 
             <div class="research">
-                <h2>Tutorial</h2>
-                I contributed to the ICML 2022 Tutorial on <a
+                <h2>Tutorial "Causality and Deep Learning"</h2>
+                I contributed to the ICML 2022 Tutorial on <b><a
                     href="https://sites.google.com/view/causalityanddeeplearning/start">"Causality and
-                    Deep Learning: Synergies, Challenges and the Future"</a>. The corresponding work (systematic survey)
+                    Deep Learning: Synergies, Challenges and the Future"</a></b>. The corresponding work (systematic survey)
                 "Deep Learning for Causality: A Unifying Perspective on Neural Causal Structure Learning" will be
-                released soon. In the meantime, you can find the slides here: <a
-                    href="https://drive.google.com/file/d/1wNyDm2j03YzVW7g8w5NkFdrMakw5lId5/view">Tutorial Slides</a>.
+                released soon. <br class="research-br"> <a class="a-paper"
+                    href="https://drive.google.com/file/d/1wNyDm2j03YzVW7g8w5NkFdrMakw5lId5/view">Tutorial Slides</a>
             </div>
 
             <div class="research">
                 <h2>Talks</h2>
+                <b>Upcoming:</b>
+                <ul>
+                    <li class="positions"><b>September 2023:</b> "Evaluating the Moral Beliefs Encoded in LLMs", ChatGPT Zurich Group
+                        (AI Meetup), Zurich</li>
+                </ul>
+                <b>Past:</b>
                 <ul>
                     <li class="positions"><b>February 2023:</b> "Deep Learning for Causality: Neural Causal Structure
                         Learning", AI for Actionable Impact (AI4AI) Lab , Imperial College London</li>
@@ -602,7 +626,7 @@
                 <br><br>
                 <div style="height: 0.1px; text-align: left">
                     <span style="background-color: white; position: relative; top: -0.5em; padding:10px; color: black;">
-                        <b>Last Updated:</b> July 6th, 2023
+                        <b>Last Updated:</b> August 18th, 2023
                     </span>
                 </div>
                 <br><br>
