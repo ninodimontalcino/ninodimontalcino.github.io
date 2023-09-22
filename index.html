@@ -55,7 +55,10 @@
 
         li>.flex-container>.flex-item-left>b {
             font-size: 14px;
-            color: rgb(143, 64, 11);
+            color: darkblue;
+        }
+        li>.flex-container>.flex-item-left>span {
+            color: darkblue;
         }
 
         li:last-child {
@@ -63,7 +66,7 @@
         }
 
         a {
-            color: darkblue;
+            color: black;
             text-decoration: none;
         }
 
@@ -152,6 +155,10 @@
             */
         }
 
+        .academic-link-box>a {
+            color: darkblue;
+        }
+
         .academic-link-box:hover {
             background: rgb(180, 180, 213);
         }
@@ -213,6 +220,11 @@
             background: rgb(180, 180, 213);
         }
 
+        .paper-title{
+            color:darkblue;
+            font-size: 14px;
+        }
+
         .box-topic {
             margin-top: 25px;
         }
@@ -240,6 +252,7 @@
         .navigaton-link {
             padding: 20px;
             font-weight: 500;
+            color: darkblue
         }
 
         .navigaton-link:hover {
@@ -324,6 +337,10 @@
                 margin-top: 20px;
                 text-align: center;
             }
+
+            .a-paper{
+                margin-top: 20px;
+            }
         }
         
     </style>
@@ -352,11 +369,10 @@
                 <img class="portrait" src="portrait.jpeg" alt="Nino Scherrer Portrait">
             </div>
             <div class="box-left">
-                <h1>Nino Scherrer</h1>
-                <h4>nino.scherrer[at]gmail.com</h4>
-                <p>I am currently a visiting researcher at <a class="highlight-company"
-                        href="https://alignmentfund.org/">FAR
-                        AI</a>. I am working with <a class="highlight" href="https://www.claudiajshi.com/">Claudia
+                <h1 style="color:darkblue">Nino Scherrer</h1>
+                <h4 style="color:darkblue">nino.scherrer[at]gmail.com</h4>
+                <p>I am currently an independent researcher. I am working with <a class="highlight"
+                        href="https://www.claudiajshi.com/">Claudia
                         Shi</a>, <a class="highlight" href="https://www.amirfeder.com/">Amir Feder</a> and <a
                         class="highlight" href="http://www.cs.columbia.edu/~blei/">Prof. David Blei</a> (Columbia University) on new
                     techniques for language model evaluations, and to elicit encoded values and biases from language
@@ -439,15 +455,15 @@
                 
                 <div class="research" id="research">
                     <h2 style="margin-top:40px">Research</h2>
-                    <h3 style="margin-top: 30px; ">- Language Model Evaluations (Black-Box Evaluations)</h3>
+                    <h3 style="margin-top: 30px; ">> Language Model Evaluations (Black-Box Evaluations)</h3>
                     <ul>
                         <li class="li-container">
                             <div class="flex-container">
                                 <div class="flex-item-left">
-                                    <b><a href="https://arxiv.org/abs/2307.14324">Evaluating the Moral Beliefs Encoded
+                                    <b><a class="paper-title" href="https://arxiv.org/abs/2307.14324">Evaluating the Moral Beliefs Encoded
                                             in LLMs</a></b><br class="research-br">
                                     <b class="b-personal">Nino Scherrer*</b>, Claudia Shi*, Amir Feder, and David Blei<br class="research-br">
-                                    Under Review at NeurIPS 2023 <br class="research-br">
+                                    <b>NeurIPS 2023 (Spotlight)</b> <br class="research-br">
                                     <a class="a-paper" href="https://arxiv.org/abs/2307.14324">Paper</a>
                                     <a class="a-paper" href="https://github.com/ninodimontalcino/moralchoice">Code</a>
                                     <a class="a-paper" href="https://huggingface.co/datasets/ninoscherrer/moralchoice">Dataset</a>
@@ -464,17 +480,18 @@
                             </div>
                         </li>
                     </ul>
-                    <h3 style="margin-top: 30px; ">- Mechanistic Interpretability (White-Box Evaluations) </h3>
+                    <h3 style="margin-top: 30px; ">> Mechanistic Interpretability (White-Box Evaluations) </h3>
                     <ul>
                             <li class="li-container">
                                 <div class="flex-container">
                                     <div class="flex-item-left">
-                                        <b><a href="https://arxiv.org/abs/2309.05858">Uncovering Mesa-Optimization Algorithms in Transformers</a></b><br
+                                        <b><a class="paper-title" href="https://arxiv.org/abs/2309.05858">Uncovering Mesa-Optimization Algorithms in
+                                                Transformers</a></b><br
                                             class="research-br">
                                         Johannes von Oswald*, Eyvind Niklasson*, Maximilian Schlegel*, Seijin Kobayashi, Nicolas Zuccet, <b
                                             class="b-personal">Nino Scherrer</b>, Nolan Miller, Mark Sandler, Blaise Agüera y Arcas, Razvan Pascanu
                                         and João Sacramento<br class="research-br">
-                                        Arxiv Preprint, 2023 <br class="research-br">
+                                        <b>Arxiv Preprint, 2023</b> <br class="research-br">
                                         <a class="a-paper" href="https://arxiv.org/abs/2309.05858">Paper</a>
                                         <div class="box-topic flex-box">
                                             <div class="box-item-topic">Mechanistic Interpretability</div>
@@ -487,16 +504,16 @@
                         </div>
                     </li>
                     </ul>
-                <h3 style="margin-top: 30px;">- Causality / Machine Learning</h3>
+                <h3 style="margin-top: 30px;">> Causality / Machine Learning</h3>
                 <ul>
                     <li class="li-container">
                         <div class="flex-container">
                             <div class="flex-item-left">
-                                <b><a href="https://arxiv.org/abs/2211.13715">Trust Your &nabla;: Gradient-based
+                                <b><a class="paper-title" href="https://arxiv.org/abs/2211.13715">Trust Your &nabla;: Gradient-based
                                         Intervention Targeting for Causal Discovery</a></b><br class="research-br">
                                 Mateusz Olko*, Michał Zając*, Aleksandra Nowak*, <b class="b-personal">Nino
                                     Scherrer</b>, Yashas Annadani, Stefan Bauer, Łukasz Kuciński, Piotr Miłoś <br class="research-br">
-                                    NeurIPS 2022 Workshop on Causality for Real-world Impact <br
+                                    <b>NeurIPS 2023</b><br
                                     class="research-br">
                                 <a class="a-paper" href="https://arxiv.org/abs/2211.13715">Paper</a>
                                 <div class="box-topic flex-box">
@@ -513,11 +530,11 @@
                     <li class="li-container">
                         <div class="flex-container">
                             <div class="flex-item-left">
-                                <b><a href="https://arxiv.org/abs/2206.04620">On the Generalization and Adaption
+                                <b><a class="paper-title" href="https://arxiv.org/abs/2206.04620">On the Generalization and Adaption
                                         Performance of Causal Models</a></b><br class="research-br">
                                 <b class="b-personal">Nino Scherrer</b>, Anirudh Goyal, Stefan Bauer, Yoshua Bengio, &
                                 Nan Rosemary Ke, <br class="research-br">
-                                ICML 2022 - SCIS and BeyondBayes Workshop <br class="research-br">
+                                <b>ICML 2022,</b><span> SCIS and BeyondBayes Workshop</span> <br class="research-br">
                                 <a class="a-paper" href="https://arxiv.org/abs/2206.04620">Paper</a>
                                 <div class="box-topic flex-box">
                                     <div class="box-item-topic">Causal Models</div>
@@ -534,12 +551,12 @@
                     <li class="li-container">
                         <div class="flex-container">
                             <div class="flex-item-left">
-                                <b><a href="blog/learning_neural_causal_models_with_active_interventions.html">Learning
+                                <b><a class="paper-title" href="blog/learning_neural_causal_models_with_active_interventions.html">Learning
                                         Neural Causal Models with Active Interventions</a></b><br class="research-br">
                                 <b class="b-personal">Nino Scherrer</b>, Olexa Bilaniuk, Yashas Annadani, Anirudh Goyal,
                                 Patrick Schwab, Bernhard Schölkopf, Michael C. Mozer, Yoshua Bengio, Stefan Bauer & Nan
                                 Rosemary Ke, <br class="research-br">
-                                NeurIPS 2021 WHY Workshop <br class="research-br">
+                                <b>NeurIPS 2021,</b><span> WHY Workshop </span><br class="research-br">
                                 <a class="a-paper" href="https://arxiv.org/abs/2109.02429">Paper</a>
                                 <a class="a-paper" href="blog/learning_neural_causal_models_with_active_interventions.html">Web Version</a>
                                 <div class="box-topic flex-box">
@@ -556,11 +573,11 @@
                     <li class="li-container">
                         <div class="flex-container">
                             <div class="flex-item-left">
-                                <b><a href="https://arxiv.org/abs/2106.07635">Variational Causal Networks: Approximate
+                                <b><a class="paper-title" href="https://arxiv.org/abs/2106.07635">Variational Causal Networks: Approximate
                                         Bayesian Inference over Causal Structures</a></b><br class="research-br">
                                 Yashas Annadani, Jonas Rothfuss, Alexandre Lacoste, <b class="b-personal">Nino
                                     Scherrer</b>, Anirudh Goyal, Yoshua Bengio & Stefan Bauer, <br class="research-br">
-                                KDD 2021 - BCIRWIS Workshop<br class="research-br">
+                                <b>KDD 2021,</b><span> BCIRWIS Workshop</span><br class="research-br">
                                 <a class="a-paper" href="https://arxiv.org/abs/2106.07635">Paper</a>
                                 <a class="a-paper" href="https://github.com/yannadani/vcn_pytorch">Code</a>
                                 <div class="box-topic flex-box">
@@ -574,18 +591,18 @@
                         </div>
                     </li>
                 </ul>
-                <h3 style="margin-top: 30px;">- Medical Image Analysis</h3>
+                <h3 style="margin-top: 30px;">> Medical Image Analysis</h3>
                 <ul>
                     <li class="li-container">
                         <div class="flex-container">
                             <div class="flex-item-left">
-                                <b><a href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Improved
+                                <b><a class="paper-title" href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Improved
                                         Segmentation and Detection Sensitivity of Diffusion-weighted Stroke Lesions with
                                         Synthetically Enhanced Deep Learning</a></b> <br class="research-br">
                                 Christian Federau, Soren Christensen, <b class="b-personal">Nino Scherrer</b>, Johanna
                                 M. Ospel, Victor Schulze-Zachau, Noemi Schmidt, Hannes-Christian Breit, Julian
                                 Macclaren, Maarten Lansberg & Sebastian Kozerke,<br class="research-br">
-                                Radiology: Artificial Intelligence (Volume 2, 2020) <br class="research-br">
+                                <b>Radiology: Artificial Intelligence,</b><span> (Volume 2, 2020)</span> <br class="research-br">
                                 <a class="a-paper" href="https://pubs.rsna.org/doi/full/10.1148/ryai.2020190217">Paper</a>
                                 <div class="box-topic flex-box">
                                     <div class="box-item-topic">Medical Image Analysis</div>
