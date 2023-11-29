@@ -13,6 +13,7 @@
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
     <!-- STYLING -->
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -29,14 +30,14 @@
         body {
             margin: 0px;
             padding: 0px;
-            font-size: 14.5px;
+            font-size: 15.5px;
             background: #f8f8f829;
         }
 
         body {
             height: 100%;
             width: 100%;
-            font-family: 'Open Sans', sans-serif;
+            font-family: 'DM Sans', sans-serif;
         }
 
         ul {
@@ -49,16 +50,21 @@
             background: white;
             padding: 5px;
             border-radius: 0px;
-            box-shadow: 0.01em 0.01em 0.4em rgb(0 0 0 / 20%);
+            /* box-shadow: 0.01em 0.01em 0.4em rgb(147 68 26 / 17%) */
+            border: 0.9px solid saddlebrown;
             margin-bottom: 20px;
+        }
+
+        li>.noborder {
+            border: 0px;
         }
 
         li>.flex-container>.flex-item-left>b {
             font-size: 14px;
-            color: darkblue;
+            color: saddlebrown;
         }
         li>.flex-container>.flex-item-left>span {
-            color: darkblue;
+            color: saddlebrown;
         }
 
         li:last-child {
@@ -138,25 +144,25 @@
         .highlight-company {
             border-radius: 0px;
             font-weight: 600;
-            color: black;
+            color: saddlebrown;
         }
 
         .academic-link-box {
-            color: darkblue;
+            color: saddlebrown;
             margin-bottom: 0px;
             float: left;
             margin: 10px 0px 0px 8px;
             padding: 6px 10px 6px 10px;
             background: white;
             border-radius: 0px;
-            border: 1px solid darkblue;
+            border: 1px solid saddlebrown;
             /*
             box-shadow: 0.05em 0.05em 0.4em rgb(0 0 0 / 20%);
             */
         }
 
         .academic-link-box>a {
-            color: darkblue;
+            color: saddlebrown;
         }
 
         .academic-link-box:hover {
@@ -186,6 +192,7 @@
         .b-personal {
             color: black !important;
             font-weight: 600;
+            text-decoration: underline;
         }
 
         .b-color {
@@ -208,10 +215,10 @@
         }
 
         .a-paper{
-            color: darkblue;
+            color: saddlebrown;
             padding: 2px 5px;
             margin: 5px 3px 0px 0px;
-            border: 1px solid darkblue;
+            border: 1px solid saddlebrown;
             font-size: 14px;
             font-weight: 500;
         }
@@ -221,8 +228,8 @@
         }
 
         .paper-title{
-            color:darkblue;
-            font-size: 14px;
+            color:saddlebrown;
+            font-size: 15px;
         }
 
         .box-topic {
@@ -232,9 +239,9 @@
         .box-item-topic {
             padding: 3px 7px;
             margin: 5px 5px 0px 0px;
-            background: #c7cff144;
+            background: #dcccb344;
             border-radius: 0px;
-            color: darkblue;
+            color: saddlebrown;
             font-size: 13px;
         }
 
@@ -247,12 +254,13 @@
             border-left: 0px;
             box-shadow: none;
             margin-bottom: 5px;
+            border: 0px !important;
         }
 
         .navigaton-link {
             padding: 20px;
-            font-weight: 500;
-            color: darkblue
+            font-weight: 900;
+            color: saddlebrown
         }
 
         .navigaton-link:hover {
@@ -369,9 +377,9 @@
                 <img class="portrait" src="portrait.jpeg" alt="Nino Scherrer Portrait">
             </div>
             <div class="box-left">
-                <h1 style="color:darkblue">Nino Scherrer</h1>
-                <h4 style="color:darkblue">nino.scherrer[at]gmail.com</h4>
-                <p>I am currently an independent researcher working on automated language model evaluations and synthetic training data construction.
+                <h1 style="color:saddlebrown">Nino Scherrer</h1>
+                <h4 style="color:saddlebrown">nino.scherrer[at]gmail.com</h4>
+                <p>I am a researcher working on automated language model evaluations and synthetic training data construction. I am also interested 
                 </p>
                 <p>
                     Previously, ...
@@ -379,7 +387,7 @@
                     <li class="positions"> Research Collaborator with <a class="highlight"
                         href="https://www.claudiajshi.com/">Claudia
                         Shi</a>, <a class="highlight" href="https://www.amirfeder.com/">Amir Feder</a> and <a
-                        class="highlight" href="http://www.cs.columbia.edu/~blei/">Prof. David Blei</a> (Columbia University) on new
+                        class="highlight" href="http://www.cs.columbia.edu/~blei/">Prof. David Blei</a> (<a class="highlight-company" href="http://www.cs.columbia.edu/">Columbia University</a>) on new
                     techniques for language model evaluations, and to elicit encoded values and biases from language
                     models.</li>
                     <li class="positions">Research intern at the <a class="highlight-company"
@@ -479,7 +487,7 @@
                             <div class="flex-container">
                                 <div class="flex-item-left">
                                     <b><a class="paper-title" href="https://arxiv.org/abs/2311.083704">SimpleSafetyTests: A Test Suite for Identifying Critical Safety Risks in Large Language Models</a></b><br class="research-br">
-                                    Bertie Vidgen, Hannah Rose Kirk, Rebecca Qian, <b class="b-personal">Nino Scherrer</b>, Anand Kannappan, Scott A Hale, Paul Röttger<br class="research-br">
+                                    Bertie Vidgen, Hannah Rose Kirk, Rebecca Qian, <b class="b-personal">Nino Scherrer</b>, Anand Kannappan, Scott A Hale and Paul Röttger<br class="research-br">
                                     <b>Arxiv Preprint, 2023</b> <br class="research-br">
                                     <a class="a-paper" href="https://arxiv.org/abs/2311.083704">Paper</a>
                                     <a class="a-paper" href="https://github.com/bertiev/SimpleSafetyTests">Dataset</a>
@@ -626,6 +634,27 @@
                             </div>
                             <div class="flex-item-right">
                                 <img src="img/SyntheticDiffusion.png" class="research-item-img">
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <h3 style="margin-top: 30px;">> Biology / Tissue Engineering</h3>
+                <ul>
+                    <li class="li-container">
+                        <div class="flex-container">
+                            <div class="flex-item-left">
+                                <b><a class="paper-title" href="https://www.sciencedirect.com/science/article/pii/S2772950823004259">Improved
+                                    Radial Matrix Constraint Influences Tissue Contraction and Promotes Maturation of Bi-Layered Skin Equivalents</a></b> <br class="research-br">
+                                    Jessica Polak, David Sachs,  <b class="b-personal">Nino Scherrer</b>, Adrian Süess, Huan Liu, Mitchell Levesque, Sabine Werner, Edoardo Mazza, Gaetana Restivo, Mirko Meboldt and Costanza Giampietro,<br class="research-br">
+                                <b>Biomaterials Advances,</b><span> (Volume 156, 2024)</span> <br class="research-br">
+                                <a class="a-paper" href="https://www.sciencedirect.com/science/article/pii/S2772950823004259">Paper</a>
+                                <div class="box-topic flex-box">
+                                    <div class="box-item-topic">Tissue Engineering</div>
+                                    <div class="box-item-topic">Human Skin Equivalents</div>
+                                </div>
+                            </div>
+                            <div class="flex-item-right">
+                                <img src="img/skin.png" class="research-item-img">
                             </div>
                         </div>
                     </li>
